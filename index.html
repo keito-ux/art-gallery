@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Art Gallery | Kvitka Atelier</title>
+  <title>Kvitka Atelier | Art Gallery</title>
   <style>
     body {
       margin: 0;
@@ -96,6 +96,14 @@
       object-fit: cover;
     }
 
+    @media screen and (max-width: 768px) {
+      .overlay-video-section video {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+      }
+    }
+
     .overlay-video-section .poem-content {
       position: absolute;
       z-index: 1;
@@ -144,6 +152,14 @@
       width: 40px;
       height: 40px;
     }
+
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+      color: #555;
+      background-color: #f2e8d5;
+    }
   </style>
 </head>
 <body>
@@ -154,7 +170,7 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
-    <h1>Welcome to Kvitka Atelier</h1>
+    <h1>Kvitka Atelier</h1>
   </div>
 
   <!-- Blueberry Artwork with Overlay Text -->
@@ -202,14 +218,6 @@
     </p>
   </section>
 
-  <!-- Return Policy Section -->
-  <section class="gallery">
-    <h2>Return & Refund Policy</h2>
-    <p>
-      All sales are final. However, if your artwork is damaged in transit, please contact us within 7 days to arrange a resolution.
-    </p>
-  </section>
-
   <!-- Contact Section -->
   <section id="contact" class="gallery">
     <h2>Contact</h2>
@@ -221,6 +229,12 @@
       </a>
     </div>
   </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><strong>Brand:</strong> Kvitka Atelier</p>
+    <p><strong>Cancel Policy:</strong> Please contact us within 24 hours after purchase for any cancellation inquiries.</p>
+  </div>
 
   <script>
     function goToCheckout(artwork) {
