@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Art Gallery | Kvitka Atelier</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', serif;
+      background-color: #FAF3E0;
+      color: #333;
+    }
+
+    .hero {
+      background-image: url('IMG_6085.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      position: relative;
+    }
+
+    .nav {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+    }
+
+    .nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .blueberry-section {
+      position: relative;
+      text-align: center;
+      background-color: #FAF3E0;
+      padding: 60px 20px;
+    }
+
+    .blueberry-frame {
+      position: relative;
+      display: inline-block;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+      max-width: 90%;
+    }
+
+    .blueberry-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .blueberry-text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      border-radius: 16px;
+      font-style: italic;
+      font-size: 1.5em;
+      line-height: 1.6;
+      max-width: 90%;
+    }
+
+    .overlay-video-section {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin: 50px auto;
+    }
+
+    .overlay-video-section video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .overlay-video-section .poem-content {
+      position: absolute;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
+      font-style: italic;
+      background: rgba(0, 0, 0, 0.4);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 12px;
+    }
+
+    .gallery {
+      padding: 50px;
+      text-align: center;
+      background-color: #FAF3E0;
+    }
+
+    .gallery img {
+      max-width: 45%;
+      height: auto;
+      margin: 20px;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    .price-tag {
+      font-size: 1.2em;
+      margin-top: 8px;
+      color: #8B5E3B;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="nav">
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <h1>Welcome to Kvitka Atelier</h1>
+  </div>
+
+  <!-- Blueberry Artwork with Overlay Text -->
+  <section class="blueberry-section">
+    <div class="blueberry-frame">
+      <img src="blueberry_star.jpg" alt="Blueberry and Stars">
+      <div class="blueberry-text-overlay">
+        A blueberry dreamed of becoming a star.<br>
+        So the sky gave it a soft place to shine.
+      </div>
+    </div>
+  </section>
+
+  <!-- Square Video with Fairy Poem Overlay -->
+  <section class="overlay-video-section">
+    <video autoplay muted loop playsinline>
+      <source src="blueberry_background.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="poem-content">
+      Twinkle steps on glowing grass,<br>
+      A twirl, a skip, like whispers pass.
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div>
+      <img src="IMG_1946.jpg" alt="Artwork 1" onclick="goToCheckout('IMG_1946.jpg')">
+      <div class="price-tag">¥70,000</div>
+    </div>
+    <div>
+      <img src="IMG_8678.jpg" alt="Artwork 2" onclick="goToCheckout('IMG_8678.jpg')">
+      <div class="price-tag">¥70,000</div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="gallery">
+    <h2>About Me</h2>
+    <p>
+      Raised abroad and shaped by travels, I express the beauty of light, nature, and quiet moments through oil painting.
+      Deeply inspired by Ukrainian life and landscapes, my works seek to hold gentle stories within each brushstroke.
+    </p>
+  </section>
+
+  <!-- Return Policy Section -->
+  <section class="gallery">
+    <h2>Return & Refund Policy</h2>
+    <p>
+      All sales are final. However, if your artwork is damaged in transit, please contact us within 7 days to arrange a resolution.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="gallery">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:atelierkvitka0@gmail.com">atelierkvitka0@gmail.com</a></p>
+    <p>Follow me on social media</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/ezeunicorn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+      </a>
+    </div>
+  </section>
+
+  <script>
+    function goToCheckout(artwork) {
+      window.location.href = 'checkout.html?art=' + artwork + '&price=70000';
+    }
+  </script>
+</body>
+</html>
+
