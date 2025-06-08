@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kvitka Atelier | Art Gallery</title>
+  <title>Art Gallery | Kvitka Atelier</title>
   <style>
     body {
       margin: 0;
@@ -79,29 +79,36 @@
       position: relative;
       width: 100%;
       max-width: 600px;
-      margin: 50px auto;
-      border-radius: 16px;
+      aspect-ratio: 1 / 1;
       overflow: hidden;
+      border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin: 50px auto;
     }
 
     .overlay-video-section video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .poem-content {
       position: absolute;
       top: 50%;
       left: 50%;
+      min-width: 100%;
+      min-height: 100%;
       transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .overlay-video-section .poem-content {
+      position: absolute;
+      z-index: 1;
       color: white;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
       font-style: italic;
       background: rgba(0, 0, 0, 0.4);
-      padding: 20px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       border-radius: 12px;
-      text-align: center;
     }
 
     .gallery {
@@ -140,16 +147,17 @@
   </style>
 </head>
 <body>
+  <!-- Hero Section -->
   <div class="hero">
     <div class="nav">
       <a href="#gallery">Gallery</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
-    <h1>Kvitka Atelier</h1>
+    <h1>Welcome to Kvitka Atelier</h1>
   </div>
 
-  <!-- Blueberry Artwork -->
+  <!-- Blueberry Artwork with Overlay Text -->
   <section class="blueberry-section">
     <div class="blueberry-frame">
       <img src="blueberry_star.jpg" alt="Blueberry and Stars">
@@ -160,7 +168,7 @@
     </div>
   </section>
 
-  <!-- Fairy Poem Video -->
+  <!-- Square Video with Fairy Poem Overlay -->
   <section class="overlay-video-section">
     <video autoplay muted loop playsinline>
       <source src="blueberry_background.mp4" type="video/mp4">
@@ -172,7 +180,7 @@
     </div>
   </section>
 
-  <!-- Gallery -->
+  <!-- Gallery Section -->
   <section id="gallery" class="gallery">
     <h2>Gallery</h2>
     <div>
@@ -185,16 +193,24 @@
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="gallery">
     <h2>About Me</h2>
     <p>
-      Raised abroad and shaped by travels, I express the beauty of light, nature, and quiet moments through oil painting.<br>
+      Raised abroad and shaped by travels, I express the beauty of light, nature, and quiet moments through oil painting.
       Deeply inspired by Ukrainian life and landscapes, my works seek to hold gentle stories within each brushstroke.
     </p>
   </section>
 
-  <!-- Contact -->
+  <!-- Return Policy Section -->
+  <section class="gallery">
+    <h2>Return & Refund Policy</h2>
+    <p>
+      All sales are final. However, if your artwork is damaged in transit, please contact us within 7 days to arrange a resolution.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="gallery">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:atelierkvitka0@gmail.com">atelierkvitka0@gmail.com</a></p>
@@ -204,8 +220,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
       </a>
     </div>
-    <h3>キャンセルポリシー</h3>
-    <p>作品の性質上、ご購入後のキャンセル・返金はお受けできません。ご了承ください。</p>
   </section>
 
   <script>
@@ -215,5 +229,3 @@
   </script>
 </body>
 </html>
-
-
