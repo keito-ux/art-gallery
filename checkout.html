@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout | Art Gallery</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #fffaf0;
+      text-align: center;
+      padding: 40px;
+    }
+    img {
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .price {
+      font-size: 1.5em;
+      margin-top: 20px;
+      color: #8B5E3B;
+    }
+    .pay-button {
+      margin-top: 30px;
+      padding: 10px 30px;
+      font-size: 18px;
+      background-color: #8B5E3B;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Confirm Your Artwork</h1>
+  <img id="artImage" src="" alt="Selected Artwork">
+  <div class="price" id="priceTag">Price: ¥</div>
+  <button class="pay-button" onclick="alert('Redirecting to Stripe payment...')">Proceed to Payment</button>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const art = urlParams.get('art');
+    const price = urlParams.get('price');
+
+    if (art) {
+      document.getElementById('artImage').src = art;
+    }
+    if (price) {
+      document.getElementById('priceTag').textContent = 'Price: ¥' + price;
+    }
+  </script>
+</body>
+</html>
+
