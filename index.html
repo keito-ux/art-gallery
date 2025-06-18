@@ -150,30 +150,31 @@
       transform: translateY(-10px);
       box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
     }
-.art-row {
+.trimmed-row {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  gap: 6px;
-  margin: 20px auto;
-  max-width: 90%;
-}
-
-.art-piece {
-  flex: 1;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
+  max-width: 100%;
+  margin: 20px auto;
 }
 
-.art-piece img {
-  width: 100%;
-  height: 100%;
+.trimmed-row img {
+  height: 200px;
   object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+/* 比率を調整 */
+.trimmed-row .small {
+  flex: 1; /* 小さめ：全体の1単位 */
+}
+
+.trimmed-row .large {
+  flex: 1.4; /* レモン：他より少し大きめ */
+}
+
 
     .price-tag {
       font-size: 1.2em;
@@ -295,18 +296,12 @@
   <section id="gallery" class="gallery">
     <h2>ギャラリー</h2>
     <!-- 🟡 ここに新しい3枚を追加！ -->
- <!-- ギャラリー上部に追加 -->
-<div class="art-row">
-  <div class="art-piece">
-    <img src="D25461D5-0A65-45B8-B0B1-8CE15407680F.jpg" alt="Blueberry Star">
-  </div>
-  <div class="art-piece">
-    <img src="IMG_9823 2.jpg" alt="Lemon Composition">
-  </div>
-  <div class="art-piece">
-    <img src="560F683C-F1B6-45CB-98AE-29F1B5C2A3F5.jpg" alt="Reindeer with Stars">
-  </div>
+<div class="trimmed-row">
+  <img src="D25461D5-0A65-45B8-B0B1-8CE15407680F.jpg" alt="Blueberry" class="small">
+  <img src="IMG_9823 2.jpg" alt="Lemon" class="large">
+  <img src="560F683C-F1B6-45CB-98AE-29F1B5C2A3F5.jpg" alt="Reindeer" class="small">
 </div>
+
 
     <div>
       <img src="IMG_1946.jpg" alt="Artwork 1" onclick="goToCheckout('IMG_1946.jpg')">
