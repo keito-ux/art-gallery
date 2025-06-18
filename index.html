@@ -240,7 +240,7 @@
       <img src="blueberry_star.jpg" alt="Blueberry and Stars">
       <div class="blueberry-text-overlay">
         ブルーベリーは星になることを夢見た<br>
-        空は優しく輝く場所を与えた
+        空は輝く場所を与えた
       </div>
     </div>
   </section>
@@ -297,10 +297,15 @@
     <p><a href="/art-gallery/tokutei-shotorihiki-hyoji.html">特定商取引法に基づく表記</a></p>
   </div>
 
-  <script>
-    function goToCheckout(artwork) {
-      window.location.href = 'checkout.html?art=' + artwork + '&price=70000';
+ <script>
+  function goToCheckout(artwork) {
+    if (artwork === 'IMG_1946.jpg') {
+      window.location.href = 'https://buy.stripe.com/fZu8wP11Vcxl0mkehH1B600';
+    } else if (artwork === 'IMG_8678.jpg') {
+      window.location.href = 'https://buy.stripe.com/8x27sLcKD7d12us2yZ1B601';
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>
