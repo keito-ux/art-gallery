@@ -15,6 +15,44 @@
 </script>
 
   <style>
+    .custom-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 40px auto;
+}
+
+.main-image {
+  flex: 0 1 60%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.side-column {
+  flex: 0 1 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.side-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
     body {
       margin: 0;
       font-family: 'Times New Roman', serif;
@@ -150,30 +188,7 @@
       transform: translateY(-10px);
       box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
     }
-.trimmed-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-  max-width: 100%;
-  margin: 20px auto;
-}
 
-.trimmed-row img {
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* 比率を調整 */
-.trimmed-row .small {
-  flex: 1; /* 小さめ：全体の1単位 */
-}
-
-.trimmed-row .large {
-  flex: 1.4; /* レモン：他より少し大きめ */
-}
 
 
     .price-tag {
@@ -296,12 +311,15 @@
   <section id="gallery" class="gallery">
     <h2>ギャラリー</h2>
     <!-- 🟡 ここに新しい3枚を追加！ -->
-<div class="trimmed-row">
-  <img src="D25461D5-0A65-45B8-B0B1-8CE15407680F.jpg" alt="Blueberry" class="small">
-  <img src="IMG_9823 2.jpg" alt="Lemon" class="large">
-  <img src="560F683C-F1B6-45CB-98AE-29F1B5C2A3F5.jpg" alt="Reindeer" class="small">
+<div class="custom-layout">
+  <div class="main-image">
+    <img src="IMG_9823 2.jpg" alt="Lemon Main">
+  </div>
+  <div class="side-column">
+    <img src="D25461D5-0A65-45B8-B0B1-8CE15407680F 2.jpg" alt="Blueberry">
+    <img src="560F683C-F1B6-45CB-98AE-29F1B5C2A3F5.jpg" alt="Reindeer">
+  </div>
 </div>
-
 
     <div>
       <img src="IMG_1946.jpg" alt="Artwork 1" onclick="goToCheckout('IMG_1946.jpg')">
