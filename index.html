@@ -294,6 +294,29 @@
   display: block;
   box-sizing: border-box; /* ←追加！ */
 }
+    .overlay-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 16px 24px;
+  border-radius: 16px;
+  font-style: italic;
+  font-size: 1.4em;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
     
 @media screen and (max-width: 768px) {
   .custom-layout {
@@ -322,8 +345,11 @@
     gap: 10px;
   }
 
-  .side-column img {
-    height: calc(50% - 5px
+  .overlay-text {
+    font-size: 1em;
+    padding: 10px 16px;
+    max-width: 90%;
+  }
 
 
     
@@ -364,15 +390,21 @@
       ゆれて、跳ねる、魔法のステップ
     </div>
   </section>
+ <div class="overlay-wrapper">
   <div class="custom-layout">
-  <div class="main-image">
-    <img src="lemon.jpg" alt="Lemon Main">
+    <div class="main-image">
+      <img src="lemon.jpg" alt="Lemon Main">
+    </div>
+    <div class="side-column">
+      <img src="blueberry.jpg" alt="Blueberry">
+      <img src="reindeer.jpg" alt="Reindeer">
+    </div>
   </div>
-  <div class="side-column">
-    <img src="blueberry.jpg" alt="Blueberry">
-    <img src="reindeer.jpg" alt="Reindeer">
+  <div class="overlay-text">
+    果実の香りが夢と重なる<br>静かな冬の記憶に抱かれて
   </div>
 </div>
+
 
   <!-- Gallery Section -->
   <section id="gallery" class="gallery">
