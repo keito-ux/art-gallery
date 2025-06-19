@@ -302,10 +302,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    max-width: 100%;
     overflow-x: hidden; /* ← スクロール防止 */
-    transform: scale(0.9); /* ← 全体を少し縮小 */
-    transform-origin: top center;
+    max-width: 100vw; /* ← 画面幅ぴったりに！ */
+    padding: 0 5px;             /* スマホでの余白 */
+    box-sizing: border-box;     /* 余白調整 */
+    gap: 10px;                  /* オプション：間隔調整 */
   }
 
   .main-image img {
