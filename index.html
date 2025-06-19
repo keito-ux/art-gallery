@@ -293,20 +293,19 @@
 .side-column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  max-height: 500px; /* レモンと揃えるための高さ制限 */
   gap: 10px;
+  justify-content: center;
 }
 
 .side-column img {
-  width: auto;
-  height: auto;
-  max-height: 49%; /* 合計で100%未満に収める（間のgap分を考慮） */
+  max-height: 240px; /* ← 高さを制限して整える */
+  width: auto;       /* ← 横幅に合わせて自然表示 */
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
 }
+
 
 
   </style>
@@ -347,11 +346,11 @@
   </section>
   <div class="custom-layout">
   <div class="main-image">
-    <img src="IMG_9823 2.jpg" alt="Lemon Main">
+    <img src="lemon.jpg" alt="Lemon Main">
   </div>
   <div class="side-column">
-    <img src="D25461D5-0A65-45B8-B0B1-8CE15407680F 2.jpg" alt="Blueberry">
-    <img src="560F683C-F1B6-45CB-98AE-29F1B5C2A3F5.jpg" alt="Reindeer">
+    <img src="blueberry.jpg" alt="Blueberry">
+    <img src="reindeer.jpg" alt="Reindeer">
   </div>
 </div>
 
