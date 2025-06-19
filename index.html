@@ -248,7 +248,6 @@
   box-sizing: border-box; /* ←これ追加！ */
 }
 
-
 .side-column {
   display: flex;
   flex-direction: column;
@@ -295,6 +294,7 @@
   display: block;
   box-sizing: border-box; /* ←追加！ */
 }
+    
 @media screen and (max-width: 768px) {
   .custom-layout {
     display: flex;
@@ -302,18 +302,20 @@
     align-items: flex-start;
     flex-wrap: nowrap;
     gap: 10px;
-    max-width: 100%;
-    padding: 0 10px;
+    width: 100%; /* ← max-width ではなく width */
+    padding: 0 5px; /* ← 少し余白を小さく */
     box-sizing: border-box;
+    overflow-x: hidden; /* 念のため */
   }
 
   .main-image img {
-    max-height: 240px; /* ← サイズをスマホ向けに縮小 */
+    max-height: 230px; /* ← 少し小さめにして収める */
     width: auto;
+    max-width: 100%;
   }
 
   .side-column {
-    height: 240px;
+    height: 230px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -321,11 +323,7 @@
   }
 
   .side-column img {
-    height: calc(50% - 5px); /* 上下画像で合計240pxになるように */
-    width: auto;
-    object-fit: contain;
-  }
-}
+    height: calc(50% - 5px
 
 
     
