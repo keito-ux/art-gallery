@@ -3,16 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kvitka Atelier | アートギャラリー</title>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHL92WKR0X"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-PHL92WKR0X');
-  </script>
-
+  <title>Kvitka Atelier | Art Gallery</title>
   <style>
     body {
       margin: 0;
@@ -105,6 +96,14 @@
       object-fit: cover;
     }
 
+    @media screen and (max-width: 768px) {
+      .overlay-video-section video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     .overlay-video-section .poem-content {
       position: absolute;
       z-index: 1;
@@ -169,227 +168,69 @@
       color: #555;
       background-color: #f2e8d5;
     }
-
-    .footer a {
-      color: #555;
-      text-decoration: underline;
-    }
-
-    @media screen and (max-width: 768px) {
-      .nav {
-        top: 10px;
-        right: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 5px;
-      }
-
-      .nav a {
-        font-size: 16px;
-        margin: 4px 0;
-      }
-
-      .blueberry-text-overlay {
-        font-size: 1em;
-        padding: 12px;
-        line-height: 1.4;
-      }
-
-      .overlay-video-section {
-        width: 90%;
-        margin: 30px auto;
-      }
-
-      .overlay-video-section .poem-content {
-        font-size: 1em;
-        padding: 10px;
-      }
-
-      .gallery img {
-        max-width: 90%;
-        margin: 10px auto;
-        display: block;
-      }
-
-      .price-tag {
-        font-size: 1em;
-      }
-
-      .footer {
-        font-size: 0.8em;
-        padding: 20px 10px;
-      }
-    }
-
-    .custom-layout {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      max-width: 100%;
-      margin: 40px auto;
-      padding: 0 10px;
-      box-sizing: border-box;
-    }
-
-    .main-image img {
-      height: 500px;
-      width: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-      display: block;
-      box-sizing: border-box;
-    }
-
-    .side-column {
-      height: 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 10px;
-      box-sizing: border-box;
-    }
-
-    .side-column img {
-      height: calc(50% - 5px);
-      width: auto;
-      object-fit: contain;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      display: block;
-      box-sizing: border-box;
-    }
-
-    @media screen and (max-width: 768px) {
-      .custom-layout {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-wrap: nowrap;
-        gap: 10px;
-        width: 100%;
-        padding: 0 5px;
-        box-sizing: border-box;
-        overflow-x: hidden;
-      }
-
-      .main-image img {
-        max-height: 230px;
-        width: auto;
-        max-width: 100%;
-      }
-
-      .side-column {
-        height: 230px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 10px;
-      }
-
-      .side-column img {
-        height: calc(50% - 5px);
-      }
-       .overlay-video-section {
-    aspect-ratio: 1 / 1;
-    max-width: 90%;
-    height: auto;
-  }
-
-  .overlay-video-section video {
-    position: static;
-    width: 100%;
-    height: auto;
-    transform: none;
-    object-fit: contain;
-  }
-
-  .overlay-video-section .poem-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1em;
-    padding: 10px;
-  }
-    }
   </style>
 </head>
 <body>
   <!-- Hero Section -->
   <div class="hero">
     <div class="nav">
-      <a href="#gallery">ギャラリー</a>
-      <a href="#about">自己紹介</a>
-      <a href="#contact">連絡</a>
-      <a href="index_en.html">English</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
     <h1>Kvitka Atelier</h1>
   </div>
 
-  <!-- Blueberry Artwork -->
+  <!-- Blueberry Artwork with Overlay Text -->
   <section class="blueberry-section">
     <div class="blueberry-frame">
       <img src="blueberry_star.jpg" alt="Blueberry and Stars">
       <div class="blueberry-text-overlay">
-        ブルーベリーは星になることを夢みた<br>
-        空は輝く場所を与えた
+        A blueberry dreamed of becoming a star.<br>
+        So the sky gave it a soft place to shine.
       </div>
     </div>
   </section>
 
-  <!-- Square Video with Fairy Poem -->
+  <!-- Square Video with Fairy Poem Overlay -->
   <section class="overlay-video-section">
     <video autoplay muted loop playsinline>
       <source src="blueberry_background.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
     <div class="poem-content">
-      光る草原、きらめくダンス<br>
-      ゆれて、跳ねる、魔法のステップ
+      Twinkle steps on glowing grass,<br>
+      A twirl, a skip, like whispers pass.
     </div>
   </section>
 
-  <!-- 3 Artworks Side by Side -->
-  <div class="custom-layout">
-    <div class="main-image">
-      <img src="lemon.jpg" alt="Lemon Main">
-    </div>
-    <div class="side-column">
-      <img src="blueberry.jpg" alt="Blueberry">
-      <img src="reindeer.jpg" alt="Reindeer">
-    </div>
-  </div>
-
-  <!-- Gallery -->
+  <!-- Gallery Section -->
   <section id="gallery" class="gallery">
-    <h2>ギャラリー</h2>
+    <h2>Gallery</h2>
     <div>
       <img src="IMG_1946.jpg" alt="Artwork 1" onclick="goToCheckout('IMG_1946.jpg')">
-      <div class="price-tag">￥70,000</div>
+      <div class="price-tag">&yen;70,000</div>
     </div>
     <div>
       <img src="IMG_8678.jpg" alt="Artwork 2" onclick="goToCheckout('IMG_8678.jpg')">
-      <div class="price-tag">￥70,000</div>
+      <div class="price-tag">&yen;70,000</div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Section -->
   <section id="about" class="gallery">
-    <h2>自己紹介</h2>
+    <h2>About Me</h2>
     <p>
-      海外で育ち、旅と出会いを通じてインスピレーションを得てきました。豊かな自然や人々の温もりの瞬間、人生の煌めき、ウクライナ文化の美しさを表現しています。
+      Raised abroad and shaped by travels, I express the beauty of light, nature, and quiet moments through oil painting.
+      Deeply inspired by Ukrainian life and landscapes, my works seek to hold gentle stories within each brushstroke.
     </p>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="gallery">
-    <h2>連絡</h2>
+    <h2>Contact</h2>
     <p>Email: <a href="mailto:atelierkvitka0@gmail.com">atelierkvitka0@gmail.com</a></p>
-    <p>作品の最新情報はInstagramで発信しています</p>
+    <p>Follow me on social media</p>
     <div class="social-icons">
       <a href="https://www.instagram.com/kvitka.atelier_ua" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
@@ -399,29 +240,13 @@
 
   <!-- Footer -->
   <div class="footer">
-    <p><strong>ブランド:</strong> Kvitka Atelier</p>
-    <p><strong>キャンセルポリシー:</strong> 購入後24時間以内にご連絡ください</p>
-    <p><a href="/art-gallery/tokutei-shotorihiki-hyoji.html">特定商取引法に基づく表記</a></p>
+    <p><strong>Brand:</strong> Kvitka Atelier</p>
+    <p><strong>Cancel Policy:</strong> Please contact us within 24 hours after purchase for any cancellation inquiries.</p>
   </div>
 
-  <!-- Fix Layout Bug on Load -->
   <script>
-    window.addEventListener("load", function () {
-      const layout = document.querySelector(".custom-layout");
-      if (layout) {
-        layout.style.display = "none";
-        setTimeout(() => {
-          layout.style.display = "flex";
-        }, 20);
-      }
-    });
-
     function goToCheckout(artwork) {
-      if (artwork === 'IMG_1946.jpg') {
-        window.location.href = 'https://buy.stripe.com/fZu8wP11Vcxl0mkehH1B600';
-      } else if (artwork === 'IMG_8678.jpg') {
-        window.location.href = 'https://buy.stripe.com/8x27sLcKD7d12us2yZ1B601';
-      }
+      window.location.href = 'checkout.html?art=' + artwork + '&price=70000';
     }
   </script>
 </body>
