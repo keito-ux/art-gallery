@@ -15,43 +15,6 @@
 </script>
 
   <style>
-    .custom-layout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  max-width: 100%;
-  margin: 40px auto;
-}
-
-.main-image {
-  flex: 0 1 60%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.main-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-}
-
-.side-column {
-  flex: 0 1 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 12px;
-}
-
-.side-column img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
 
     body {
       margin: 0;
@@ -269,42 +232,13 @@
         padding: 20px 10px;
       }
     }
-    .custom-layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
-  max-width: 90%;
-  margin: 40px auto;
-}
+    
 
-/* レモン画像：基準となる高さを持たせる */
-.main-image img {
-  height: auto;
-  max-height: 500px; /* 最大高さ（調整可）*/
-  width: auto;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-}
 
 /* サイド（縦並び）ブルーベリー・トナカイ */
-.side-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: center;
-}
 
-.side-column img {
-  max-height: 240px; /* ← 高さを制限して整える */
-  width: auto;       /* ← 横幅に合わせて自然表示 */
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: block;
-}
+
+
 .custom-layout {
   display: flex;
   justify-content: center;
@@ -317,14 +251,6 @@
   padding: 0 10px;
 }
 
-.main-image img {
-  max-height: 500px;
-  width: auto;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  display: block;
-}
 
 .side-column {
   display: flex;
@@ -333,14 +259,43 @@
   justify-content: space-between;
 }
 
+.custom-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+
+.main-image img {
+  height: 500px;
+  width: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  display: block;
+}
+
+.side-column {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .side-column img {
-  max-height: 240px;
+  height: 50%;
   width: auto;
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   display: block;
 }
+
 
 
 
