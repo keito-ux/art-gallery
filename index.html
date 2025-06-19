@@ -305,6 +305,42 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   display: block;
 }
+.custom-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap; /* 横並びを強制 */
+  overflow-x: auto;   /* スマホで横スクロール許可 */
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+
+.main-image img {
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  display: block;
+}
+
+.side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.side-column img {
+  max-height: 240px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+}
 
 
 
