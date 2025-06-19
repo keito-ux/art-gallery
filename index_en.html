@@ -30,13 +30,17 @@
       position: absolute;
       top: 20px;
       right: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 5px;
     }
 
     .nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
-      font-size: 18px;
+      font-size: 16px;
+      margin: 4px 0;
     }
 
     .blueberry-section {
@@ -247,8 +251,8 @@
     <div class="blueberry-frame">
       <img src="blueberry_star.jpg" alt="Blueberry and Stars">
       <div class="blueberry-text-overlay">
-        A blueberry dreamed of becoming a star.<br>
-        So the sky gave it a soft place to shine.
+        ブルーベリーは星になることを夢みた<br>
+        空は輝く場所を与えた
       </div>
     </div>
   </section>
@@ -259,18 +263,18 @@
       Your browser does not support the video tag.
     </video>
     <div class="poem-content">
-      Twinkle steps on glowing grass,<br>
-      A twirl, a skip, like whispers pass.
+      果実の香りが夢と重なる<br>
+      静かな冬の記憶に抱かれて
     </div>
   </section>
 
   <div class="custom-layout">
     <div class="main-image">
-      <img src="lemon.jpg" alt="Lemon Main">
+      <img src="lemon.jpg" alt="Lemon Main" loading="lazy">
     </div>
     <div class="side-column">
-      <img src="blueberry.jpg" alt="Blueberry">
-      <img src="reindeer.jpg" alt="Reindeer">
+      <img src="blueberry.jpg" alt="Blueberry" loading="lazy">
+      <img src="reindeer.jpg" alt="Reindeer" loading="lazy">
     </div>
   </div>
 
@@ -289,15 +293,14 @@
   <section id="about" class="gallery">
     <h2>About Me</h2>
     <p>
-      Raised abroad and shaped by travels, I express the beauty of light, nature, and quiet moments through oil painting.
-      Deeply inspired by Ukrainian life and landscapes, my works seek to hold gentle stories within each brushstroke.
+      海外で育ち、旅と出会いを通じてインスピレーションを得てきました。豊かな自然や人々の温もりの瞬間、人生の煌めき、ウクライナ文化の美しさを表現しています。
     </p>
   </section>
 
   <section id="contact" class="gallery">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:atelierkvitka0@gmail.com">atelierkvitka0@gmail.com</a></p>
-    <p>Follow me on social media</p>
+    <p>作品の最新情報はInstagramで発信しています</p>
     <div class="social-icons">
       <a href="https://www.instagram.com/kvitka.atelier_ua" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
@@ -306,8 +309,8 @@
   </section>
 
   <div class="footer">
-    <p><strong>Brand:</strong> Kvitka Atelier</p>
-    <p><strong>Cancel Policy:</strong> Please contact us within 24 hours after purchase for any cancellation inquiries.</p>
+    <p><strong>ブランド:</strong> Kvitka Atelier</p>
+    <p><strong>キャンセルポリシー:</strong> 購入後24時間以内にご連絡ください</p>
   </div>
 
   <script>
@@ -317,6 +320,7 @@
   </script>
 </body>
 </html>
+
 
 
 
