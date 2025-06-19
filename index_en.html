@@ -423,6 +423,9 @@
       window.location.href = 'https://buy.stripe.com/8x27sLcKD7d12us2yZ1B601';
     }
   }
+    window.addEventListener('load', function () {
+      window.dispatchEvent(new Event('resize'));
+    });
 </script>
 
 </body>
