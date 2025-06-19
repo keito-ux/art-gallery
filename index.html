@@ -297,36 +297,35 @@
 }
 @media screen and (max-width: 768px) {
   .custom-layout {
-    flex-direction: row;
+    display: flex;
     justify-content: center;
     align-items: flex-start;
-    overflow-x: hidden;
-    max-width: 100vw;
-    padding: 0 5px;
-    box-sizing: border-box;
+    flex-wrap: nowrap;
     gap: 10px;
+    max-width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .main-image img {
-    max-height: 280px;
+    max-height: 240px; /* ← サイズをスマホ向けに縮小 */
     width: auto;
   }
 
   .side-column {
-    height: auto; /* ←高さ制限を解除 */
+    height: 240px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
   }
 
   .side-column img {
-    max-height: 135px; /* ←個別に高さ指定（画像2枚 + gapで約280px） */
+    height: calc(50% - 5px); /* 上下画像で合計240pxになるように */
     width: auto;
     object-fit: contain;
   }
 }
-
 
 
     
