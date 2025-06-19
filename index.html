@@ -293,6 +293,28 @@
       .side-column img {
         height: calc(50% - 5px);
       }
+       .overlay-video-section {
+    aspect-ratio: 1 / 1;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .overlay-video-section video {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+    object-fit: contain;
+  }
+
+  .overlay-video-section .poem-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    padding: 10px;
+  }
     }
   </style>
 </head>
