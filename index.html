@@ -428,6 +428,13 @@
     window.addEventListener('load', function () {
       window.dispatchEvent(new Event('resize'));
     });
+    // ✅ これを追加（ブルーベリーとトナカイ画像の強制表示）
+  window.addEventListener('load', () => {
+    const sideImages = document.querySelectorAll('.side-column img');
+    sideImages.forEach(img => {
+      img.style.display = 'block';
+    });
+  });
 </script>
 
 </body>
