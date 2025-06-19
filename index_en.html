@@ -274,6 +274,10 @@
         flex-direction: column;
         gap: 10px;
       }
+
+      .side-column img {
+        height: calc(50% - 5px);
+      }
     }
   </style>
 </head>
@@ -357,6 +361,16 @@
   </div>
 
   <script>
+    window.addEventListener("load", function () {
+      const layout = document.querySelector(".custom-layout");
+      if (layout) {
+        layout.style.display = "none";
+        setTimeout(() => {
+          layout.style.display = "flex";
+        }, 20);
+      }
+    });
+
     function goToCheckout(artwork) {
       if (artwork === 'IMG_1946.jpg') {
         window.location.href = 'https://buy.stripe.com/fZu8wP11Vcxl0mkehH1B600';
