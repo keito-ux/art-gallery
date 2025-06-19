@@ -233,11 +233,7 @@
       }
     }
     
-
-
 /* サイド（縦並び）ブルーベリー・トナカイ */
-
-
 
 .custom-layout {
   display: flex;
@@ -299,7 +295,37 @@
   display: block;
   box-sizing: border-box; /* ←追加！ */
 }
+    
+@media screen and (max-width: 768px) {
+  .custom-layout {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 100%;
+    overflow-x: hidden; /* ← スクロール防止 */
+    transform: scale(0.9); /* ← 全体を少し縮小 */
+    transform-origin: top center;
+  }
 
+  .main-image img {
+    max-height: 300px;
+    width: auto;
+  }
+
+  .side-column {
+    height: 300px;
+    gap: 8px;
+  }
+
+  .side-column img {
+    height: 48%;
+    width: auto;
+  }
+}
+
+
+    
 
   </style>
 </head>
