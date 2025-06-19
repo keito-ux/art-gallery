@@ -244,11 +244,12 @@
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  flex-wrap: nowrap; /* 横並びを強制 */
-  overflow-x: auto;   /* スマホで横スクロール許可 */
+  flex-wrap: nowrap;
+  overflow-x: auto;
   max-width: 100%;
   margin: 40px auto;
   padding: 0 10px;
+  box-sizing: border-box; /* ←これ追加！ */
 }
 
 
@@ -277,6 +278,7 @@
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
   display: block;
+  box-sizing: border-box; /* ←追加！ */
 }
 
 .side-column {
@@ -285,18 +287,18 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
+  box-sizing: border-box; /* ←追加！ */
 }
 
 .side-column img {
-  height: 50%;
+  height: calc(50% - 5px); /* ←この行を少し変えてgapを考慮 */
   width: auto;
   object-fit: contain;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   display: block;
+  box-sizing: border-box; /* ←追加！ */
 }
-
-
 
 
   </style>
