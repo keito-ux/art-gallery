@@ -233,97 +233,7 @@
       }
     }
     
-/* サイド（縦並び）ブルーベリー・トナカイ */
 
-.custom-layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  max-width: 100%;
-  margin: 40px auto;
-  padding: 0 10px;
-  box-sizing: border-box; /* ←これ追加！ */
-}
-
-.side-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-.custom-layout {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  max-width: 100%;
-  margin: 40px auto;
-  padding: 0 10px;
-}
-
-.main-image img {
-  height: 500px;
-  width: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  display: block;
-  box-sizing: border-box; /* ←追加！ */
-}
-
-.side-column {
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 10px;
-  box-sizing: border-box; /* ←追加！ */
-}
-
-.side-column img {
-  height: calc(50% - 5px); /* ←この行を少し変えてgapを考慮 */
-  width: auto;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  display: block;
-  box-sizing: border-box; /* ←追加！ */
-}
-    
-@media screen and (max-width: 768px) {
-  .custom-layout {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: nowrap;
-    gap: 10px;
-    width: 100%; /* ← max-width ではなく width */
-    padding: 0 5px; /* ← 少し余白を小さく */
-    box-sizing: border-box;
-    overflow-x: hidden; /* 念のため */
-  }
-
-  .main-image img {
-    max-height: 230px; /* ← 少し小さめにして収める */
-    width: auto;
-    max-width: 100%;
-  }
-
-  .side-column {
-    height: 230px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .side-column img {
-    height: calc(50% - 5px
 
 
     
@@ -365,15 +275,6 @@
       ゆれて、跳ねる、魔法のステップ
     </div>
   </section>
- <div class="custom-layout">
-  <div class="main-image">
-    <img src="lemon.jpg" alt="Lemon Main">
-  </div>
-  <div class="side-column">
-    <img src="blueberry.jpg" alt="Blueberry">
-    <img src="reindeer.jpg" alt="Reindeer">
-  </div>
-</div>
 
 
 
