@@ -295,6 +295,20 @@
   box-sizing: border-box; /* ←追加！ */
 }
     
+.book-cover-frame {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.book-cover-frame img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+    
 @media screen and (max-width: 768px) {
   .custom-layout {
     display: flex;
@@ -396,12 +410,9 @@
   <h2>絵本『If I Followed the Star』</h2>
   <p>あの星についていったら...</p>
 
-  <div class="blueberry-frame">
-    <img src="379C70CE-FEA3-4424-A28E-CCC15E74926E_web.JPG" alt="絵本 If I Followed the Star 表紙">
-    <div class="blueberry-text-overlay">
-      あの星についていったら...
-    </div>
-  </div>
+ <div class="book-cover-frame">
+    <img src="379C70CE-FEA3-4424-A28E-CCC15E74926E_web.JPG" alt="絵本表紙" />
+ </div>
 
   <div style="margin-top: 30px;">
     <video autoplay muted loop playsinline style="width: 100%; max-width: 600px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
