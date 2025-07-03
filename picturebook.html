@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picture Book — Coming Soon</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      margin: 0;
+      background: #fdf9f4;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(to bottom, #fef6e4, #e8f0ff);
+      padding: 80px 20px 40px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8em;
+      color: #6c63ff;
+      margin: 0 0 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #5c5c5c;
+    }
+    .section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease;
+    }
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .image-full {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+      margin: 20px 0;
+    }
+    .quote {
+      font-style: italic;
+      font-size: 1.2em;
+      color: #555;
+      margin: 40px 0;
+      text-align: center;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta button {
+      background: #6c63ff;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cta button:hover {
+      background: #4e4bc4;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .section {
+        padding: 30px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Coming Soon: The Star and the Garden</h1>
+    <p>A magical journey into a world of light, kindness, and co-creation</p>
+  </header>
+
+  <section class="section">
+    <img src="your-key-visual.jpg" alt="Picture book visual" class="image-full">
+    <p class="quote">"One of the important goals of this picture book project is to create art that brings beauty, kindness, and happiness to people."</p>
+  </section>
+
+  <section class="section">
+    <h2>The Story</h2>
+    <p>The story follows a young boy who, one quiet night, discovers a star fairy glowing gently in his room. Curious and enchanted, he follows the fairy through the darkness, eventually stepping into a magical world.</p>
+    <p>Guided by a gentle reindeer, the boy embarks on a dreamlike journey through this world. Along the way, he plants a mysterious seed and begins to grow a garden — one that slowly blooms with the light and memories he gathers.</p>
+    <p><strong>Chasing the star</strong> symbolizes the pursuit of one's destiny — the longing to follow what truly calls to the heart.</p>
+    <p><strong>Growing a garden</strong> reflects a quiet truth: even though you can't catch a butterfly by chasing it, when you tend to the garden, the butterfly comes to you.</p>
+  </section>
+
+  <section class="section">
+    <h2>Behind the Scenes</h2>
+    <p>This book is co-created with artists from Ukraine and Japan, bringing together voices across borders. It is a shared space of imagination and expression, where art becomes a bridge of hope.</p>
+    <!-- Optional: Insert photos of artist or sketches -->
+  </section>
+
+  <section class="section cta">
+    <h2>Be the first to read it</h2>
+    <p>We’re launching soon — sign up to receive early access and limited edition offers.</p>
+    <button onclick="window.location.href='https://your-stripe-checkout-or-mailchimp-link'">Notify Me</button>
+  </section>
+
+  <script>
+    // Fade-in on scroll animation
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
