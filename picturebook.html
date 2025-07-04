@@ -8,15 +8,41 @@
     body {
       font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
-      background-color: #4C5D8C; /* 背景色を全体に統一 */
-      color: #FFF8F0;
+      background-color: #4C5D8C;
+      color: #333;
       overflow-x: hidden;
+      position: relative;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: floatStar 10s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes floatStar {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-800px) scale(1.2);
+        opacity: 0;
+      }
     }
 
     .wrapper {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 20px;
+      background-color: #fdf9f4;
+      z-index: 1;
+      position: relative;
     }
 
     header {
@@ -32,7 +58,7 @@
 
     header p {
       font-size: 1.2em;
-      color: #FBEEDC;
+      color: #4C5D8C;
     }
 
     .section {
@@ -60,7 +86,7 @@
     .quote {
       font-style: italic;
       font-size: 1.2em;
-      color: #FFE9D6;
+      color: #4C5D8C;
       margin: 40px 0;
       text-align: center;
     }
@@ -109,34 +135,12 @@
     .profile-item h3 {
       margin: 0.5em 0 0.2em;
       font-size: 1.2em;
-      color: #FFF8F0;
+      color: #4C5D8C;
     }
 
     .profile-item p {
       font-size: 0.95em;
-      color: #f2e8d5;
-    }
-
-    .star {
-      position: absolute;
-      width: 2px;
-      height: 2px;
-      background: #fff;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: floatStar 10s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes floatStar {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(-800px) scale(1.2);
-        opacity: 0;
-      }
+      color: #555;
     }
 
     .title-with-image {
@@ -167,6 +171,7 @@
   </style>
 </head>
 <body>
+  <!-- ⭐ 星をbody全体に配置（JSで動的に） -->
   <div class="wrapper">
     <header>
       <h1>Coming Soon: The Star and the Garden</h1>
@@ -231,20 +236,17 @@
   </div>
 
   <script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.1 });
+    // ⭐ 星を body に直接追加
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * window.innerHeight}px`;
+      star.style.animationDuration = `${5 + Math.random() * 10}s`;
+      document.body.appendChild(star);
+    }
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-
-    // スクロール時アニメーション
+    // 🔄 スクロール表示アニメーション
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -260,4 +262,5 @@
   </script>
 </body>
 </html>
+
 
