@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Picture Book — Coming Soon</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Star and the Garden — Coming Soon</title>
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
@@ -69,6 +69,33 @@
     .cta button:hover {
       background: #4e4bc4;
     }
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    .profile-item {
+      flex: 1 1 200px;
+      text-align: center;
+    }
+    .profile-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .profile-item h3 {
+      margin: 0.5em 0 0.2em;
+      font-size: 1.2em;
+      color: #333;
+    }
+    .profile-item p {
+      font-size: 0.95em;
+      color: #666;
+    }
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
@@ -87,31 +114,52 @@
 
   <section class="section">
     <img src="your-key-visual.jpg" alt="Picture book visual" class="image-full">
-    <p class="quote">"One of the important goals of this picture book project is to create art that brings beauty, kindness, and happiness to people."</p>
+    <p class="quote">
+      "More than a book — a shared space of beauty, kindness, and imagination."
+    </p>
   </section>
 
   <section class="section">
-    <h2>The Story</h2>
-    <p>The story follows a young boy who, one quiet night, discovers a star fairy glowing gently in his room. Curious and enchanted, he follows the fairy through the darkness, eventually stepping into a magical world.</p>
-    <p>Guided by a gentle reindeer, the boy embarks on a dreamlike journey through this world. Along the way, he plants a mysterious seed and begins to grow a garden — one that slowly blooms with the light and memories he gathers.</p>
-    <p><strong>Chasing the star</strong> symbolizes the pursuit of one's destiny — the longing to follow what truly calls to the heart.</p>
-    <p><strong>Growing a garden</strong> reflects a quiet truth: even though you can't catch a butterfly by chasing it, when you tend to the garden, the butterfly comes to you.</p>
+    <h2>About the Story</h2>
+    <p>
+      One quiet night, a young boy meets a glowing star fairy in his room. 
+      Entranced, he follows her into a world of wonder. Guided by a gentle reindeer, 
+      he journeys through enchanted forests and silent skies, planting a seed that grows into a blooming garden — a symbol of memory and light.
+    </p>
+    <p>
+      <strong>Chasing the star</strong> is about listening to your heart’s calling.  
+      <strong>Growing a garden</strong> reminds us: when you nurture your space with care, beauty comes to you.
+    </p>
   </section>
 
   <section class="section">
     <h2>Behind the Scenes</h2>
-    <p>This book is co-created with artists from Ukraine and Japan, bringing together voices across borders. It is a shared space of imagination and expression, where art becomes a bridge of hope.</p>
-    <!-- Optional: Insert photos of artist or sketches -->
+    <p>
+      This project began in Kyiv, where Japanese artist <strong>Keito Nakanishi</strong> and Ukrainian illustrator <strong>Yulianna</strong> met. 
+      What started as a simple exchange of art and stories became a heartfelt mission — to create a picture book that crosses borders, supporting Ukraine and opening a space for shared expression.
+    </p>
+
+    <div class="profile">
+      <div class="profile-item">
+        <img src="keito.jpg" alt="Keito Nakanishi">
+        <h3>Keito Nakanishi</h3>
+        <p>Japanese artist and storyteller. Captures beauty in small moments and connects cultures through light-filled art.</p>
+      </div>
+      <div class="profile-item">
+        <img src="yulianna.jpg" alt="Yulianna">
+        <h3>Yulianna</h3>
+        <p>Ukrainian illustrator. Specializes in magical realism and fairy-tale-inspired visuals rooted in Ukrainian spirit.</p>
+      </div>
+    </div>
   </section>
 
   <section class="section cta">
-    <h2>Be the first to read it</h2>
+    <h2>Be the First to Read It</h2>
     <p>We’re launching soon — sign up to receive early access and limited edition offers.</p>
     <button onclick="window.location.href='https://your-stripe-checkout-or-mailchimp-link'">Notify Me</button>
   </section>
 
   <script>
-    // Fade-in on scroll animation
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -127,3 +175,4 @@
   </script>
 </body>
 </html>
+
