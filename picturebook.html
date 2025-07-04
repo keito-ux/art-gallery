@@ -8,8 +8,8 @@
     body {
       font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
-      background: #fdf9f4;
-      color: #333;
+      background-color: #4C5D8C; /* 背景色を全体に統一 */
+      color: #FFF8F0;
       overflow-x: hidden;
     }
 
@@ -20,10 +20,8 @@
     }
 
     header {
-      background-color: #4C5D8C;
       padding: 80px 20px 40px;
       text-align: center;
-      color: white;
     }
 
     header h1 {
@@ -49,11 +47,6 @@
     .section.show {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    .night-sky {
-      background-color: #4C5D8C;
-      color: #FFF8F0;
     }
 
     .image-full {
@@ -180,14 +173,14 @@
       <p>A magical journey into a world of light, kindness, and co-creation</p>
     </header>
 
-    <section class="section night-sky">
+    <section class="section">
       <img src="your-key-visual.jpg" alt="Picture book visual" class="image-full">
       <p class="quote">
         "More than a book — a shared space of beauty, kindness, and imagination."
       </p>
     </section>
 
-    <section class="section night-sky">
+    <section class="section">
       <div class="title-with-image">
         <h2>About the Story</h2>
         <img src="deer.png" alt="Deer" class="inline-icon">
@@ -203,7 +196,7 @@
       </p>
     </section>
 
-    <section class="section night-sky">
+    <section class="section">
       <div class="title-with-image">
         <h2>Behind the Scenes</h2>
         <img src="sheep.png" alt="Sheep" class="inline-icon">
@@ -230,7 +223,7 @@
       </div>
     </section>
 
-    <section class="section night-sky cta">
+    <section class="section cta">
       <h2>Be the First to Read It</h2>
       <p>We’re launching soon — sign up to receive early access and limited edition offers.</p>
       <button onclick="window.location.href='https://your-stripe-checkout-or-mailchimp-link'">Notify Me</button>
@@ -238,17 +231,17 @@
   </div>
 
   <script>
-    // 夜空セクションに星を追加
-    const nightSections = document.querySelectorAll('.night-sky');
-    nightSections.forEach(section => {
-      for (let i = 0; i < 50; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${100 + Math.random() * 800}px`;
-        star.style.animationDuration = `${5 + Math.random() * 10}s`;
-        section.appendChild(star);
-      }
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      observer.observe(section);
     });
 
     // スクロール時アニメーション
@@ -267,3 +260,4 @@
   </script>
 </body>
 </html>
+
