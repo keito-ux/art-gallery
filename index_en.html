@@ -24,7 +24,7 @@
     }
 
     .hero {
-      background-image: url('IMG_6085.jpg');
+      background-image: url('Main.jpg');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -344,12 +344,7 @@
     window.addEventListener('load', function () {
       window.dispatchEvent(new Event('resize'));
     });
-    // ✅ これを追加（ブルーベリーとトナカイ画像の強制表示）
-  window.addEventListener('load', () => {
-    const sideImages = document.querySelectorAll('.side-column img');
-    sideImages.forEach(img => {
-      img.style.display = 'block';
-    });
+   
   });
 </script>
 
