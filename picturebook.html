@@ -13,28 +13,32 @@
       overflow-x: hidden;
     }
 
-   header {
-  background-color: #4C5D8C;
-  padding: 80px 20px 40px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.8em;
-  color: #FFECA8; /* 優しい目立つ黄色 */
-  margin: 0 0 10px;
-}
-
-header p {
-  font-size: 1.2em;
-  color: #FBEEDC; /* 柔らかいピンクベージュ */
-}
-
-
-    .section {
-      padding: 50px 20px;
+    .wrapper {
       max-width: 900px;
       margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: #4C5D8C;
+      padding: 80px 20px 40px;
+      text-align: center;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      color: #FFECA8;
+      margin: 0 0 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #FBEEDC;
+    }
+
+    .section {
+      padding: 50px 0;
       opacity: 0;
       transform: translateY(30px);
       transition: all 1s ease;
@@ -142,74 +146,99 @@ header p {
       }
     }
 
+    .title-with-image {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .inline-icon {
+      width: 80px;
+      height: auto;
+      opacity: 0.9;
+    }
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2em;
       }
       .section {
-        padding: 30px 15px;
+        padding: 30px 0;
+      }
+      .inline-icon {
+        width: 60px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Coming Soon: The Star and the Garden</h1>
-    <p>A magical journey into a world of light, kindness, and co-creation</p>
-  </header>
+  <div class="wrapper">
+    <header>
+      <h1>Coming Soon: The Star and the Garden</h1>
+      <p>A magical journey into a world of light, kindness, and co-creation</p>
+    </header>
 
-  <section class="section night-sky">
-    <img src="your-key-visual.jpg" alt="Picture book visual" class="image-full">
-    <p class="quote">
-      "More than a book — a shared space of beauty, kindness, and imagination."
-    </p>
-  </section>
+    <section class="section night-sky">
+      <img src="your-key-visual.jpg" alt="Picture book visual" class="image-full">
+      <p class="quote">
+        "More than a book — a shared space of beauty, kindness, and imagination."
+      </p>
+    </section>
 
-  <section class="section night-sky">
-    <h2>About the Story</h2>
-    <p>
-      One quiet night, a boy meets a glowing star fairy in his room. 
-      Entranced, he follows her into a world of wonder. Guided by a gentle reindeer, 
-      he journeys through enchanted forests and silent skies, planting a seed that grows into a blooming garden — a symbol of hope and light.
-    </p>
-    <p>
-      <strong>Chasing the star</strong> is about listening to your heart’s calling.  
-      <strong>Growing a garden</strong> reminds us: when you nurture your space with care, beauty comes to you.
-    </p>
-  </section>
-
-  <section class="section night-sky">
-    <h2>Behind the Scenes</h2>
-    <p>
-      This project began with two people — <strong>Keito</strong> from Japan and <strong>Yulianna</strong> from Ukraine — who first met in Kyiv and later started co-creating online.
-      What started as a simple exchange of art and stories became a heartfelt mission — to create a picture book that crosses borders, supporting Ukraine and opening a space for shared expression.
-    </p>
-
-    <div class="profile">
-      <div class="profile-item">
-        <img src="keito.jpg" alt="Keito Nakanishi">
-        <h3>Keito Nakanishi</h3>
-        <p>A senior student at Sophia University in Tokyo, majoring in science and engineering.
-        In August 2024, he backpacked through Eastern Europe and was deeply moved by the spirit of the Ukrainian people.
-        That winter, he traveled to Ukraine, visiting Kyiv and Lviv.
-        Although self-taught in oil painting, he creates works that reflect quiet beauty and cross-cultural connection — shaped by his travels, encounters, and a deep desire to express warmth through art.</p>
+    <section class="section night-sky">
+      <div class="title-with-image">
+        <h2>About the Story</h2>
+        <img src="deer.png" alt="Deer" class="inline-icon">
       </div>
-      <div class="profile-item">
-        <img src="yulianna.jpg" alt="Yulianna">
-        <h3>Yulianna</h3>
-        <p>？</p>
-      </div>
-    </div>
-  </section>
+      <p>
+        One quiet night, a boy meets a glowing star fairy in his room. 
+        Entranced, he follows her into a world of wonder. Guided by a gentle reindeer, 
+        he journeys through enchanted forests and silent skies, planting a seed that grows into a blooming garden — a symbol of hope and light.
+      </p>
+      <p>
+        <strong>Chasing the star</strong> is about listening to your heart’s calling. <br>  
+        <strong>Growing a garden</strong> reminds us: when you nurture your space with care, beauty comes to you.
+      </p>
+    </section>
 
-  <section class="section night-sky cta">
-    <h2>Be the First to Read It</h2>
-    <p>We’re launching soon — sign up to receive early access and limited edition offers.</p>
-    <button onclick="window.location.href='https://your-stripe-checkout-or-mailchimp-link'">Notify Me</button>
-  </section>
+    <section class="section night-sky">
+      <div class="title-with-image">
+        <h2>Behind the Scenes</h2>
+        <img src="sheep.png" alt="Sheep" class="inline-icon">
+      </div>
+      <p>
+        This project began with two people — <strong>Keito</strong> from Japan and <strong>Yulianna</strong> from Ukraine — who first met in Kyiv and later started co-creating online.
+        What started as a simple exchange of art and stories became a heartfelt mission — to create a picture book that crosses borders, supporting Ukraine and opening a space for shared expression.
+      </p>
+
+      <div class="profile">
+        <div class="profile-item">
+          <img src="keito.jpg" alt="Keito Nakanishi">
+          <h3>Keito Nakanishi</h3>
+          <p>A senior student at Sophia University in Tokyo, majoring in science and engineering.
+            In August 2024, he backpacked through Eastern Europe and was deeply moved by the spirit of the Ukrainian people.
+            That winter, he traveled to Ukraine, visiting Kyiv and Lviv.
+            Although self-taught in oil painting, he creates works that reflect quiet beauty and cross-cultural connection — shaped by his travels, encounters, and a deep desire to express warmth through art.</p>
+        </div>
+        <div class="profile-item">
+          <img src="yulianna.jpg" alt="Yulianna">
+          <h3>Yulianna</h3>
+          <p>？</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section night-sky cta">
+      <h2>Be the First to Read It</h2>
+      <p>We’re launching soon — sign up to receive early access and limited edition offers.</p>
+      <button onclick="window.location.href='https://your-stripe-checkout-or-mailchimp-link'">Notify Me</button>
+    </section>
+  </div>
 
   <script>
-    // 星を各 night-sky セクションに生成
+    // 夜空セクションに星を追加
     const nightSections = document.querySelectorAll('.night-sky');
     nightSections.forEach(section => {
       for (let i = 0; i < 50; i++) {
@@ -238,4 +267,3 @@ header p {
   </script>
 </body>
 </html>
-
