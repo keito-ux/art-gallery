@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kvitka Atelier | アートギャラリー</title>
-  <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PHL92WKR0X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <title>Kvitka Atelier</title>
 
-  gtag('config', 'G-PHL92WKR0X');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHL92WKR0X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PHL92WKR0X');
+  </script>
 
   <style>
-
+    /* 英語版と同じスタイルを使用 */
     body {
       margin: 0;
       font-family: 'Times New Roman', serif;
@@ -50,86 +50,6 @@
       font-size: 18px;
     }
 
-    .blueberry-section {
-      position: relative;
-      text-align: center;
-      background-color: #FAF3E0;
-      padding: 60px 20px;
-    }
-
-    .blueberry-frame {
-      position: relative;
-      display: inline-block;
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-      max-width: 90%;
-    }
-
-    .blueberry-frame img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-
-    .blueberry-text-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.5);
-      padding: 20px;
-      border-radius: 16px;
-      font-style: italic;
-      font-size: 1.5em;
-      line-height: 1.6;
-      max-width: 90%;
-    }
-
-    .overlay-video-section {
-      position: relative;
-      width: 100%;
-      max-width: 600px;
-      aspect-ratio: 1 / 1;
-      overflow: hidden;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-      margin: 50px auto;
-    }
-
-    .overlay-video-section video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-    }
-
-    @media screen and (max-width: 768px) {
-      .overlay-video-section video {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .overlay-video-section .poem-content {
-      position: absolute;
-      z-index: 1;
-      color: white;
-      text-align: center;
-      width: 100%;
-      padding: 20px;
-      font-style: italic;
-      background: rgba(0, 0, 0, 0.4);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 12px;
-    }
-
     .gallery {
       padding: 50px;
       text-align: center;
@@ -151,8 +71,6 @@
       transform: translateY(-10px);
       box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
     }
-
-
 
     .price-tag {
       font-size: 1.2em;
@@ -186,7 +104,8 @@
       color: #555;
       text-decoration: underline;
     }
-        @media screen and (max-width: 768px) {
+
+    @media screen and (max-width: 768px) {
       .nav {
         top: 10px;
         right: 10px;
@@ -199,22 +118,6 @@
       .nav a {
         font-size: 16px;
         margin: 4px 0;
-      }
-
-      .blueberry-text-overlay {
-        font-size: 1em;
-        padding: 12px;
-        line-height: 1.4;
-      }
-
-      .overlay-video-section {
-        width: 90%;
-        margin: 30px auto;
-      }
-
-      .overlay-video-section .poem-content {
-        font-size: 1em;
-        padding: 10px;
       }
 
       .gallery img {
@@ -232,12 +135,6 @@
         padding: 20px 10px;
       }
     }
-    
-
-
-
-    
-
   </style>
 </head>
 <body>
@@ -245,83 +142,59 @@
   <div class="hero">
     <div class="nav">
       <a href="#gallery">ギャラリー</a>
-      <a href="#about">自己紹介</a>
-      <a href="#contact">連絡</a>
+      <a href="#about">プロフィール</a>
+      <a href="#contact">お問い合わせ</a>
       <a href="#picturebook">絵本</a>
-      <a href="index_en.html">English</a>
+      <a href="en.html">English</a>
     </div>
     <h1>Kvitka Atelier</h1>
   </div>
 
-  <!-- Blueberry Artwork with Overlay Text -->
-  <section class="blueberry-section">
-    <div class="blueberry-frame">
-      <img src="blueberry_star.jpg" alt="Blueberry and Stars">
-      <div class="blueberry-text-overlay">
-        ブルーベリーは星になることを夢みた<br>
-        空は輝く場所を与えた
-      </div>
-    </div>
-  </section>
-
-  <!-- Square Video with Fairy Poem Overlay -->
-  <section class="overlay-video-section">
-    <video autoplay muted loop playsinline>
-      <source src="blueberry_background.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="poem-content">
-      光る草原、きらめくダンス<br>
-      ゆれて、跳ねる、魔法のステップ
-    </div>
-  </section>
-
-
-
   <!-- Gallery Section -->
   <section id="gallery" class="gallery">
     <h2>ギャラリー</h2>
+    <div><img src="chika.jpg" alt="Chika 絵画"></div>
+    <div><img src="yulianna.jpg" alt="Yulianna 絵画"></div>
+    <div><img src="yana.jpg" alt="Yana 絵画"></div>
     <div>
-      <img src="IMG_1946.jpg" alt="Artwork 1" onclick="goToCheckout('IMG_1946.jpg')">
-      <div class="price-tag">￥70,000</div>
+      <img src="IMG_1946.jpg" alt="作品1" onclick="goToCheckout('IMG_1946.jpg')">
+      <div class="price-tag">¥70,000</div>
     </div>
     <div>
-      <img src="IMG_8678.jpg" alt="Artwork 2" onclick="goToCheckout('IMG_8678.jpg')">
-      <div class="price-tag">￥70,000</div>
+      <img src="IMG_8678.jpg" alt="作品2" onclick="goToCheckout('IMG_8678.jpg')">
+      <div class="price-tag">¥70,000</div>
     </div>
   </section>
 
-  <!-- Picture Book Section -->
-<!-- Picture Book Teaser -->
-<section id="picturebook" class="gallery">
-  <h2>絵本『If I Followed the Star』</h2>
-  <p>あの星についていったら...</p>
-
-  <div style="margin-top: 30px;">
-    <video autoplay muted loop playsinline　 poster="379C70CE-FEA3-4424-A28E-CCC15E74926E 2.jpg" style="width: 100%; max-width: 600px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
-      <source src="ScreenRecording_06-22-2025 16.mov" type="video/mp4">
-      お使いのブラウザでは動画が再生できません
-    </video>
-  </div>
-
-  <div style="margin-top: 30px;">
-    <a href="picturebook.html" style="font-size: 1.2em; text-decoration: underline;">▶ 絵本の詳細を見る</a>
-  </div>
-</section>
+  <!-- Picture Book Teaser -->
+  <section id="picturebook" class="gallery">
+    <h2>絵本<br>『あの星を追いかけたみたら』</h2>
+    <div style="margin-top: 30px;">
+      <video autoplay muted loop playsinline poster="379C70CE-FEA3-4424-A28E-CCC15E74926E 2.jpg" style="width: 100%; max-width: 600px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
+        <source src="ScreenRecording_06-22-2025 16.mov" type="video/mp4">
+        お使いのブラウザでは動画を再生できません。
+      </video>
+    </div>
+    <div style="margin-top: 30px;">
+      <a href="picturebook.html" style="font-size: 1.2em; text-decoration: underline;">▶ 絵本をみる</a>
+    </div>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="gallery">
-    <h2>自己紹介</h2>
+    <h2>プロフィール</h2>
     <p>
-      海外で育ち、旅と出会いを通じてインスピレーションを得てきました。豊かな自然や人々の温もりの瞬間、人生の煌めき、ウクライナ文化の美しさを表現しています。
+    　東京都在住。2024年に東欧とウクライナを旅し、人々や風景に心を動かされました。<br>
+      心動いた瞬間の煌めきを、独学で油絵に描いています。<br>
+      <a href="picturebook.html#about" style="text-decoration: underline;">▶ もっと読む</a>
     </p>
   </section>
 
   <!-- Contact Section -->
   <section id="contact" class="gallery">
-    <h2>連絡</h2>
-    <p>Email: <a href="mailto:atelierkvitka0@gmail.com">atelierkvitka0@gmail.com</a></p>
-    <p>作品の最新情報はInstagramで発信しています</p>
+    <h2>お問い合わせ</h2>
+    <p>メール: <a href="mailto:atelierkvitka0@gmail.com">atelierkvitka0@gmail.com</a></p>
+    <p>Instagramはこちら：</p>
     <div class="social-icons">
       <a href="https://www.instagram.com/kvitka.atelier_ua" target="_blank">
         <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
@@ -331,25 +204,24 @@
 
   <!-- Footer -->
   <div class="footer">
-    <p><strong>ブランド:</strong> Kvitka Atelier</p>
-    <p><strong>キャンセルポリシー:</strong> 購入後24時間以内にご連絡ください</p>
+    <p><strong>ブランド：</strong>Kvitka Atelier</p>
+    <p><strong>キャンセルポリシー：</strong>ご購入から24時間以内にご連絡ください。</p>
     <p><a href="/art-gallery/tokutei-shotorihiki-hyoji.html">特定商取引法に基づく表記</a></p>
   </div>
 
- <script>
-  function goToCheckout(artwork) {
-    if (artwork === 'IMG_1946.jpg') {
-      window.location.href = 'https://buy.stripe.com/fZu8wP11Vcxl0mkehH1B600';
-    } else if (artwork === 'IMG_8678.jpg') {
-      window.location.href = 'https://buy.stripe.com/8x27sLcKD7d12us2yZ1B601';
+  <script>
+    function goToCheckout(artwork) {
+      if (artwork === 'IMG_1946.jpg') {
+        window.location.href = 'https://buy.stripe.com/fZu8wP11Vcxl0mkehH1B600';
+      } else if (artwork === 'IMG_8678.jpg') {
+        window.location.href = 'https://buy.stripe.com/8x27sLcKD7d12us2yZ1B601';
+      }
     }
-  }
+
     window.addEventListener('load', function () {
       window.dispatchEvent(new Event('resize'));
     });
-
-  });
-</script>
-
+  </script>
 </body>
 </html>
+
