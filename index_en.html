@@ -4,18 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kvitka Atelier | Art Gallery</title>
+
   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PHL92WKR0X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHL92WKR0X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PHL92WKR0X');
+  </script>
 
-  gtag('config', 'G-PHL92WKR0X');
-</script>
-
-   <style>
-
+  <style>
     body {
       margin: 0;
       font-family: 'Times New Roman', serif;
@@ -48,6 +47,61 @@
       margin: 0 15px;
       text-decoration: none;
       font-size: 18px;
+    }
+
+    .gallery {
+      padding: 50px;
+      text-align: center;
+      background-color: #FAF3E0;
+    }
+
+    .gallery img {
+      max-width: 45%;
+      height: auto;
+      margin: 20px;
+      cursor: pointer;
+      vertical-align: middle;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .price-tag {
+      font-size: 1.2em;
+      margin-top: 8px;
+      color: #8B5E3B;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 10px;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+      color: #555;
+      background-color: #f2e8d5;
+    }
+
+    .footer a {
+      color: #555;
+      text-decoration: underline;
     }
 
     .blueberry-section {
@@ -107,14 +161,6 @@
       object-fit: cover;
     }
 
-    @media screen and (max-width: 768px) {
-      .overlay-video-section video {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
     .overlay-video-section .poem-content {
       position: absolute;
       z-index: 1;
@@ -130,63 +176,7 @@
       border-radius: 12px;
     }
 
-    .gallery {
-      padding: 50px;
-      text-align: center;
-      background-color: #FAF3E0;
-    }
-
-    .gallery img {
-      max-width: 45%;
-      height: auto;
-      margin: 20px;
-      cursor: pointer;
-      vertical-align: middle;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
-    }
-
-
-
-    .price-tag {
-      font-size: 1.2em;
-      margin-top: 8px;
-      color: #8B5E3B;
-    }
-
-    .social-icons {
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      display: inline-block;
-      margin: 10px;
-    }
-
-    .social-icons img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9em;
-      color: #555;
-      background-color: #f2e8d5;
-    }
-
-    .footer a {
-      color: #555;
-      text-decoration: underline;
-    }
-        @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       .nav {
         top: 10px;
         right: 10px;
@@ -232,9 +222,6 @@
         padding: 20px 10px;
       }
     }
-  
-    
-
   </style>
 </head>
 <body>
@@ -250,31 +237,6 @@
     <h1>Kvitka Atelier</h1>
   </div>
 
-  <!-- Blueberry Artwork with Overlay Text -->
-  <section class="blueberry-section">
-    <div class="blueberry-frame">
-      <img src="blueberry_star.jpg" alt="Blueberry and Stars">
-      <div class="blueberry-text-overlay">
-        A blueberry dreamed of becoming a star.<br>
-        So the sky gave it a soft place to shine.
-      </div>
-    </div>
-  </section>
-
-  <!-- Square Video with Fairy Poem Overlay -->
-  <section class="overlay-video-section">
-    <video autoplay muted loop playsinline>
-      <source src="blueberry_background.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="poem-content">
-      Twinkle steps on glowing grass,<br>
-      A twirl, a skip, like whispers pass.
-    </div>
-  </section>
-
-
-
   <!-- Gallery Section -->
   <section id="gallery" class="gallery">
     <h2>Gallery</h2>
@@ -286,31 +248,63 @@
       <img src="IMG_8678.jpg" alt="Artwork 2" onclick="goToCheckout('IMG_8678.jpg')">
       <div class="price-tag">&yen;70,000</div>
     </div>
+    <div>
+      <img src="chika.jpg" alt="Chika Painting">
+    </div>
+    <div>
+      <img src="yulianna.jpg" alt="Yulianna Painting">
+    </div>
+    <div>
+      <img src="yana.jpg" alt="Yana Painting">
+    </div>
   </section>
 
   <!-- Picture Book Teaser -->
-<section id="picturebook" class="gallery">
-  <h2>Picture Book<If I Followed the Star></h2>
+  <section id="picturebook" class="gallery">
+    <h2>Picture Book &lt;If I Followed the Star&gt;</h2>
 
-  <div style="margin-top: 30px;">
-    <video autoplay muted loop playsinline poster="379C70CE-FEA3-4424-A28E-CCC15E74926E 2.jpg" style="width: 100%; max-width: 600px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
-      <source src="ScreenRecording_06-22-2025 16.mov" type="video/mp4">
-      お使いのブラウザでは動画が再生できません
-    </video>
-  </div>
+    <!-- Blueberry Artwork with Overlay Text -->
+    <div class="blueberry-section">
+      <div class="blueberry-frame">
+        <img src="blueberry_star.jpg" alt="Blueberry and Stars">
+        <div class="blueberry-text-overlay">
+          A blueberry dreamed of becoming a star.<br>
+          So the sky gave it a soft place to shine.
+        </div>
+      </div>
+    </div>
 
-  <div style="margin-top: 30px;">
-    <a href="picturebook.html" style="font-size: 1.2em; text-decoration: underline;">▶ Explore the Picture Book</a>
-  </div>
-</section>
+    <!-- Square Video with Fairy Poem Overlay -->
+    <div class="overlay-video-section">
+      <video autoplay muted loop playsinline>
+        <source src="blueberry_background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="poem-content">
+        Twinkle steps on glowing grass,<br>
+        A twirl, a skip, like whispers pass.
+      </div>
+    </div>
 
+    <div style="margin-top: 30px;">
+      <video autoplay muted loop playsinline poster="379C70CE-FEA3-4424-A28E-CCC15E74926E 2.jpg" style="width: 100%; max-width: 600px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
+        <source src="ScreenRecording_06-22-2025 16.mov" type="video/mp4">
+        お使いのブラウザでは動画が再生できません
+      </video>
+    </div>
+
+    <div style="margin-top: 30px;">
+      <a href="picturebook.html" style="font-size: 1.2em; text-decoration: underline;">▶ Explore the Picture Book</a>
+    </div>
+  </section>
 
   <!-- About Section -->
   <section id="about" class="gallery">
     <h2>About Me</h2>
     <p>
       Raised abroad and shaped by travels, I express the beauty of light, nature, and quiet moments through oil painting.
-      Deeply inspired by Ukrainian life and landscapes, my works seek to hold gentle stories within each brushstroke.
+      Deeply inspired by Ukrainian life and landscapes, my works seek to hold gentle stories within each brushstroke.<br>
+      <a href="picturebook.html#about" style="text-decoration: underline;">▶ 詳しくはこちら</a>
     </p>
   </section>
 
@@ -333,24 +327,21 @@
     <p><a href="/art-gallery/tokutei-shotorihiki-hyoji.html">特定商取引法に基づく表記</a></p>
   </div>
 
- <script>
-  function goToCheckout(artwork) {
-    if (artwork === 'IMG_1946.jpg') {
-      window.location.href = 'https://buy.stripe.com/fZu8wP11Vcxl0mkehH1B600';
-    } else if (artwork === 'IMG_8678.jpg') {
-      window.location.href = 'https://buy.stripe.com/8x27sLcKD7d12us2yZ1B601';
+  <script>
+    function goToCheckout(artwork) {
+      if (artwork === 'IMG_1946.jpg') {
+        window.location.href = 'https://buy.stripe.com/fZu8wP11Vcxl0mkehH1B600';
+      } else if (artwork === 'IMG_8678.jpg') {
+        window.location.href = 'https://buy.stripe.com/8x27sLcKD7d12us2yZ1B601';
+      }
     }
-  }
+
     window.addEventListener('load', function () {
       window.dispatchEvent(new Event('resize'));
     });
-   
-  });
-</script>
-
+  </script>
 </body>
 </html>
-
 
 
 
