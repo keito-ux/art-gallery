@@ -160,6 +160,42 @@
   margin-bottom: -10px;
   color: #FFECA8;
 }
+    
+    .marquee-section {
+  padding: 30px;
+  background: #f5f4fc;
+  text-align: center;
+  font-family: sans-serif;
+}
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+.marquee-content {
+  display: flex;
+  gap: 40px;
+  animation: scroll-left 30s linear infinite;
+}
+.art-card {
+  flex: 0 0 auto;
+  width: 160px;
+  text-align: center;
+}
+.art-card img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.art-card p {
+  margin-top: 8px;
+  font-size: 1em;
+  color: #333;
+}
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+    
 
     @media (max-width: 600px) {
       header h1 {
@@ -236,6 +272,72 @@
       </div>
     </section>
 
+<section class="marquee-section">
+  <h2>🌸 Current number of participants: 26</h2>
+  <div class="marquee">
+    <div class="marquee-content" id="marquee-content">
+      <!-- 🔁 各参加者をここに1人ずつ追加 -->
+      <div class="art-card">
+        <img src="1.jpg" alt="Tanya's art">
+        <p>🇺🇦 Tanya</p>
+      </div>
+      <div class="art-card">
+        <img src="2.jpg" alt="Daryna Shevchenko's art">
+        <p>🇺🇦 Daryna Shevchenko</p>
+      </div>
+      <div class="art-card">
+        <img src="3.jpg" alt="Varvara's art">
+        <p>🇺🇦 Varvara</p>
+      <div class="art-card">
+        <img src="4.webp" alt="Zlata Dzhus's art">
+        <p>🇺🇦 Zlata Dzhus</p>
+      </div>
+      <div class="art-card">
+        <img src="5.jpg" alt="Anastasiia Lebedieva's art">
+        <p>🇺🇦 Anastasiia Lebedieva</p>
+      </div>
+      <div class="art-card">
+        <img src="6.png" alt="Alina Hrubets's art">
+        <p>🇺🇦 Alina Hrubets</p>
+      </div>
+      <div class="art-card">
+        <img src="7.png" alt="Olha Zdorovets's art">
+        <p>🇺🇦 Olha Zdorovets</p>
+      </div>
+      <div class="art-card">
+        <img src="8.jpg" alt="Anna Medianyk's art">
+        <p>🇺🇦 Anna Medianyk</p>
+      </div>
+      <div class="art-card">
+        <img src="9.png" alt="Sofi Romova's art">
+        <p>🇺🇦 Sofi Romova</p>
+      </div>
+      <div class="art-card">
+        <img src="10.png" alt="Oleksandra Velychko's art">
+        <p>🇺🇦 Oleksandra Velychko</p>
+      </div>
+      <div class="art-card">
+        <img src="11.png" alt="Dubovyk's art">
+        <p>🇺🇦 Dubovyk</p>
+      </div> 
+      <div class="art-card">
+        <img src="12.jpg" alt="Iryna Winnik's art">
+        <p>🇺🇦 Iryna Winnik</p>
+      </div> 
+      <div class="art-card">
+        <img src="13.jpg" alt="Ihor Barabash's art">
+        <p>🇺🇦 Ihor Barabash</p>
+      </div>
+      <div class="art-card">
+        <img src="14.png" alt="Irene Gordeeva's art">
+        <p>🇺🇦 Irene Gordeeva</p>
+      </div>  
+      </div>
+    </div>
+  </div>
+</section>
+
+    
     <section class="section cta">
       <h2>Be the First to Read It</h2>
       <p>We’re launching soon — sign up to receive early access and limited edition offers.</p>
@@ -268,6 +370,10 @@
       observer.observe(section);
     });
   </script>
+  <script>
+  const content = document.getElementById('marquee-content');
+  content.innerHTML += content.innerHTML; // 内容を2倍に複製してループ
+</script>
 </body>
 </html>
 
