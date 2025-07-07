@@ -161,22 +161,14 @@
   color: #FFECA8;
 }
     
-    .marquee-section {
+  .marquee-section {
   padding: 30px;
   background: #f5f4fc;
   text-align: center;
   font-family: sans-serif;
 }
-.marquee {
-  overflow: hidden;
-  position: relative;
-}
-.marquee-content {
-  display: flex;
-  gap: 40px;
-  animation: scroll-left 30s linear infinite;
-}
-    .marquee-section h2 {
+
+.marquee-section h2 {
   background-color: #fffbe6;
   padding: 10px 20px;
   border-radius: 12px;
@@ -185,26 +177,42 @@
   font-weight: 500;
 }
 
+.marquee {
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.marquee::-webkit-scrollbar {
+  display: none;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 40px;
+}
+
 .art-card {
   flex: 0 0 auto;
   width: 160px;
   text-align: center;
 }
+
 .art-card img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
+
 .art-card p {
   margin-top: 8px;
   font-size: 1em;
   color: #333;
 }
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
-    
+
 
     @media (max-width: 600px) {
       header h1 {
@@ -380,10 +388,6 @@
       observer.observe(section);
     });
   </script>
-  <script>
-  const content = document.getElementById('marquee-content');
-  content.innerHTML += content.innerHTML; // 内容を2倍に複製してループ
-</script>
 </body>
 </html>
 
