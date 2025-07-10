@@ -228,6 +228,15 @@
   </style>
 </head>
 <body>
+
+  <nav style="position: fixed; top: 0; width: 100%; background: rgba(76, 93, 140, 0.9); padding: 10px 20px; z-index: 999; display: flex; justify-content: center; gap: 20px; font-family: 'Helvetica Neue', sans-serif;">
+  <a href="#making" style="color: #FFECA8; text-decoration: none;">Making</a>
+  <a href="#story" style="color: #FFECA8; text-decoration: none;">Story</a>
+  <a href="#behind" style="color: #FFECA8; text-decoration: none;">Behind</a>
+  <a href="#participants" style="color: #FFECA8; text-decoration: none;">100 Flower Paintings</a>
+  <a href="#signup" style="color: #FFECA8; text-decoration: none;">Notify Me</a>
+</nav>
+
   <div class="wrapper">
     <header>
        <p class="brand">Presented by <strong>Kvitka Atelier</strong></p>
@@ -236,7 +245,7 @@
       <p>A magical journey into a world of light, kindness, and co-creation</p>
     </header>
 
-    <section class="section">
+    <section class="section" id="making">
   <div class="title-with-image">
     <h2>Making Process</h2>
   </div>
@@ -278,7 +287,7 @@
   </div>
 </section>
 
-    <section class="section">
+    <section class="section" id="story">
       <div class="title-with-image">
         <h2>About the Story</h2>
         <img src="deer.png" alt="Deer" class="inline-icon">
@@ -295,7 +304,7 @@
     </section>
 
     <section class="section">
-      <div class="title-with-image">
+      <div class="title-with-image" id="behind">
         <h2>Behind the Scenes</h2>
         <img src="sheep.png" alt="Sheep" class="inline-icon">
       </div>
@@ -324,7 +333,7 @@
       </div>
     </section>
 
-<section class="marquee-section">
+<section class="marquee-section" id="participants">
   <h2> Current number of participants: 26</h2>
   <div class="marquee">
     <div class="marquee-content" id="marquee-content">
@@ -395,7 +404,7 @@
 </section>
 
     
-    <section class="section cta">
+    <section class="section cta" id="signup">
       <h2>Be the First to Read It</h2>
       <p>We’re launching soon — sign up to receive early access and limited edition offers.</p>
       <button onclick="window.location.href='https://your-stripe-checkout-or-mailchimp-link'">Notify Me</button>
