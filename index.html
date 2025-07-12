@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kvitka Atelier</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       height: 100vh;
-      background: linear-gradient(135deg, #1c1f2b, #2a2f3d);
+      background: radial-gradient(circle at top, #1b1f2b, #12161f);
       font-family: 'Helvetica Neue', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
       color: #f7f7f7;
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
+      position: relative;
     }
 
     .container {
@@ -22,6 +24,14 @@
       width: 100%;
       max-width: 420px;
       padding: 20px;
+      z-index: 1;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
     }
 
     .profile img {
@@ -40,7 +50,9 @@
     }
 
     .link-button {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       padding: 16px 20px;
       margin: 12px 0;
@@ -52,6 +64,8 @@
       text-decoration: none;
       transition: all 0.3s ease;
       backdrop-filter: blur(4px);
+      box-sizing: border-box;
+      min-height: 50px;
     }
 
     .link-button:hover {
@@ -76,13 +90,56 @@
         height: 80px;
       }
     }
+
+    /* ★ 流れ星アニメーション */
+    .shooting-star {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(white, rgba(255, 255, 255, 0));
+      opacity: 0.7;
+      transform: rotate(45deg);
+      animation: fall 3s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translate(-50%, -100px) rotate(45deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(500px, 500px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .shooting-star:nth-child(2) {
+      left: 20%;
+      animation-delay: 2s;
+    }
+
+    .shooting-star:nth-child(3) {
+      left: 80%;
+      animation-delay: 4s;
+    }
   </style>
 </head>
 <body>
 
+  <!-- 流れ星たち -->
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
   <div class="container">
     <div class="profile">
-      <img src="IMG_7833.jpg" alt="Profile Image">
+      <img src="IMG_7833.jpg" alt="Profile Image" />
       <h2>Kvitka Atelier</h2>
     </div>
 
@@ -92,4 +149,5 @@
 
 </body>
 </html>
+
 
