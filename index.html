@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kvitka Atelier</title>
   <style>
-    /* 全体設定と背景 */
     body {
       margin: 0;
       padding: 0;
       height: 100vh;
-      background: url('スクリーンショット 2025-07-12 16.21.57.png') no-repeat center center;
-      background-size: cover;
+      background: radial-gradient(ellipse at top, #0d1b3d, #091427, #050c1a);
       font-family: 'Helvetica Neue', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
       color: #f7f7f7;
       display: flex;
@@ -95,29 +93,33 @@
     /* 星のきらめきアニメーション */
     .star {
       position: absolute;
-      width: 4px;
-      height: 4px;
+      width: 3px;
+      height: 3px;
       background: white;
       border-radius: 50%;
-      opacity: 0.8;
-      animation: twinkle 2s infinite ease-in-out;
+      opacity: 0.7;
+      animation: twinkle 2.5s infinite ease-in-out;
     }
 
-    .star:nth-child(1) { top: 20%; left: 30%; animation-delay: 0s; }
-    .star:nth-child(2) { top: 40%; left: 60%; animation-delay: 0.5s; }
-    .star:nth-child(3) { top: 65%; left: 25%; animation-delay: 1.2s; }
-    .star:nth-child(4) { top: 30%; left: 80%; animation-delay: 0.8s; }
-    .star:nth-child(5) { top: 50%; left: 50%; animation-delay: 1.5s; }
+    .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+    .star:nth-child(2) { top: 25%; left: 70%; animation-delay: 1s; }
+    .star:nth-child(3) { top: 60%; left: 30%; animation-delay: 0.5s; }
+    .star:nth-child(4) { top: 40%; left: 80%; animation-delay: 1.5s; }
+    .star:nth-child(5) { top: 70%; left: 60%; animation-delay: 0.2s; }
+    .star:nth-child(6) { top: 85%; left: 40%; animation-delay: 1.8s; }
+    .star:nth-child(7) { top: 15%; left: 50%; animation-delay: 2s; }
 
     @keyframes twinkle {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
+      0%, 100% { opacity: 0.3; transform: scale(1); }
       50% { opacity: 1; transform: scale(1.8); }
     }
   </style>
 </head>
 <body>
 
-  <!-- 星エフェクト（星は小さな点でアニメーション） -->
+  <!-- キラキラ星 -->
+  <div class="star"></div>
+  <div class="star"></div>
   <div class="star"></div>
   <div class="star"></div>
   <div class="star"></div>
