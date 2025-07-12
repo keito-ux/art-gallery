@@ -91,12 +91,26 @@
       }
     }
 
-   
+    /* ⭐ 追加: starクラスの定義 */
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 0.2; }
+    }
+
   </style>
 </head>
 <body>
 
-  
   <div class="container">
     <div class="profile">
       <img src="IMG_7833.jpg" alt="Profile Image" />
@@ -106,18 +120,20 @@
     <a class="link-button" href="https://keito-ux.github.io/art-gallery/picturebook/">Picture Book</a>
     <a class="link-button" href="https://keito-ux.github.io/art-gallery/artwork/">Original Work</a>
   </div>
-<script>
+
+  <script>
     // ⭐ 星を body に直接追加
     for (let i = 0; i < 100; i++) {
       const star = document.createElement('div');
       star.classList.add('star');
       star.style.left = `${Math.random() * 100}%`;
-      star.style.top = `${Math.random() * document.body.scrollHeight}px`;
+      star.style.top = `${Math.random() * window.innerHeight}px`;
       star.style.animationDuration = `${5 + Math.random() * 10}s`;
       document.body.appendChild(star);
     }
 
-    // 🔄 スクロール表示アニメーション
+    // 🔄 （未使用のためコメントアウト）
+    /*
     const sections = document.querySelectorAll('.section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -130,7 +146,9 @@
     sections.forEach(section => {
       observer.observe(section);
     });
+    */
   </script>
 </body>
 </html>
+
 
