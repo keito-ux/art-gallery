@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       height: 100vh;
-      background: radial-gradient(ellipse at top, #0d1b3d, #091427, #050c1a);
+      background: radial-gradient(ellipse at center, #0d1b3d, #050c1a);
       font-family: 'Helvetica Neue', 'Yu Gothic', 'Hiragino Kaku Gothic ProN', sans-serif;
       color: #f7f7f7;
       display: flex;
@@ -25,6 +25,7 @@
       max-width: 420px;
       padding: 20px;
       z-index: 2;
+      position: relative;
     }
 
     .profile {
@@ -50,12 +51,11 @@
     }
 
     .link-button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      display: inline-block;
       width: 100%;
+      max-width: 300px;
       padding: 16px 20px;
-      margin: 12px 0;
+      margin: 12px auto;
       font-size: 1rem;
       color: #fff;
       background: rgba(255, 255, 255, 0.06);
@@ -65,6 +65,7 @@
       transition: all 0.3s ease;
       backdrop-filter: blur(4px);
       min-height: 50px;
+      text-align: center;
     }
 
     .link-button:hover {
@@ -81,7 +82,7 @@
       .link-button {
         font-size: 0.95rem;
         padding: 14px 18px;
-        margin: 10px 0;
+        margin: 10px auto;
       }
 
       .profile img {
@@ -90,41 +91,71 @@
       }
     }
 
-    /* 星のきらめきアニメーション */
+    /* 星（✦風に） */
     .star {
       position: absolute;
-      width: 3px;
-      height: 3px;
+      width: 10px;
+      height: 10px;
+      background: transparent;
+      pointer-events: none;
+    }
+
+    .star::before, .star::after {
+      content: '';
+      position: absolute;
       background: white;
-      border-radius: 50%;
-      opacity: 0.7;
-      animation: twinkle 2.5s infinite ease-in-out;
+      border-radius: 2px;
+      opacity: 0.8;
     }
 
-    .star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-    .star:nth-child(2) { top: 25%; left: 70%; animation-delay: 1s; }
-    .star:nth-child(3) { top: 60%; left: 30%; animation-delay: 0.5s; }
-    .star:nth-child(4) { top: 40%; left: 80%; animation-delay: 1.5s; }
-    .star:nth-child(5) { top: 70%; left: 60%; animation-delay: 0.2s; }
-    .star:nth-child(6) { top: 85%; left: 40%; animation-delay: 1.8s; }
-    .star:nth-child(7) { top: 15%; left: 50%; animation-delay: 2s; }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.3; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.8); }
+    .star::before {
+      width: 2px;
+      height: 10px;
+      top: 0;
+      left: 4px;
     }
+
+    .star::after {
+      width: 10px;
+      height: 2px;
+      top: 4px;
+      left: 0;
+    }
+
+    /* アニメーション */
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-20vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    /* 複数星を配置 */
+    .star:nth-child(n+1):nth-child(-n+25) {
+      animation: floatUp 10s linear infinite;
+    }
+
+    /* 個別に位置・時間調整 */
+    ${Array.from({ length: 25 }, (_, i) => {
+      const top = 100 + Math.random() * 200; // start below screen
+      const left = Math.random() * 100;
+      const delay = (Math.random() * 10).toFixed(1);
+      const duration = (8 + Math.random() * 5).toFixed(1);
+      return `.star:nth-child(${i + 1}) { left: ${left}%; top: ${top}vh; animation-delay: ${delay}s; animation-duration: ${duration}s; }`;
+    }).join('\n')}
   </style>
 </head>
 <body>
 
-  <!-- キラキラ星 -->
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
-  <div class="star"></div>
+  <!-- ✦ キラキラ上昇する星 -->
+  ${Array.from({ length: 25 }, () => '<div class="star"></div>').join('\n')}
 
   <div class="container">
     <div class="profile">
@@ -138,6 +169,4 @@
 
 </body>
 </html>
-
-
 
