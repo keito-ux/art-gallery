@@ -37,7 +37,7 @@
     }
 
     .wrapper {
-      max-width: 900px;
+      max-width: none;
       margin: 0 auto;
       padding: 0 10px;
       z-index: 1;
@@ -301,15 +301,16 @@
 }
     .grid-gallery {
   display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr)); /* カードを均等に最大幅で広げる */
-      gap: 10px; /* ← カード間の隙も縮めた例 */
-      width: 100%;  
-      padding: 0 5px; /* ← 画面端との余白を少しだけ残す */
- 
-  max-width: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 10px;
   margin: 0 auto;
   margin-top: 30px;
+  box-sizing: border-box;
 }
+
 
 .card {
   background: #fff;
