@@ -301,7 +301,9 @@
 }
     .grid-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr)); /* カードを均等に最大幅で広げる */
+      gap: 10px; /* ← カード間の隙も縮めた例 */
+      padding: 0 5px; /* ← 画面端との余白を少しだけ残す */
   gap: 15px;
   max-width: 900px;
   margin: 0 auto;
