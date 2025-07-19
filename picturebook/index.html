@@ -330,7 +330,20 @@
   font-weight: bold;
 }
   
-    
+.instagram-link {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.instagram-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;   /* 丸く切り取る */
+  object-fit: cover;    /* はみ出さずフィット */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 任意：少し立体感 */
+}
+
 
 
 
@@ -464,11 +477,11 @@
         <img src="1.jpg" alt="Tanya's art">
         <p>🇺🇦 Tanya</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('Daryna Shevchenko')">
         <img src="2.jpg" alt="Daryna Shevchenko's art">
         <p>🇺🇦 Daryna Shevchenko</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('Varvara')">
         <img src="3.jpg" alt="Varvara's art">
         <p>🇺🇦 Varvara</p>
       </div>
@@ -476,23 +489,23 @@
         <img src="4.webp" alt="Zlata Dzhus's art">
         <p>🇺🇦 Zlata Dzhus</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('Anastasiia Lebedieva')">
         <img src="5.jpg" alt="Anastasiia Lebedieva's art">
         <p>🇺🇦 Anastasiia Lebedieva</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('Alina Hrubets')">
         <img src="6.jpg" alt="Alina Hrubets's art">
         <p>🇺🇦 Alina Hrubets</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('Olha Zdorovets')">
         <img src="7.png" alt="Olha Zdorovets's art">
         <p>🇺🇦 Olha Zdorovets</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('Anna Medianyk')">
         <img src="8.jpg" alt="Anna Medianyk's art">
         <p>🇺🇦 Anna Medianyk</p>
       </div>
-    <div class="card">
+    <div class="card" onclick="openModal('Oleksandra Velychko')">
         <img src="10.png" alt="Oleksandra Velychko's art">
         <p>🇺🇦 Oleksandra Velychko</p>
       </div>
@@ -515,7 +528,7 @@
         <p>🇺🇦 Anastasiia Kopach</p>
       </div>
    
-    <div class="card">
+    <div class="card" onclick="openModal('Tanya Bilous')">
         <img src="18.jpg" alt="Tanya Bilous's art">
         <p>🇺🇦 Tanya Bilous</p>
       </div> 
@@ -540,15 +553,15 @@
         <p>🇬🇧 Lisa House</p>
       </div> 
     
-      <div class="card">
+      <div class="card" onclick="openModal('Sofi Romova')">
         <img src="9.png" alt="Sofi Romova's art">
         <p>🇺🇦 Sofi Romova</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('Iryna Winnik')">
         <img src="12.jpg" alt="Iryna Winnik's art">
         <p>🇺🇦 Iryna Winnik</p>
       </div> 
-    <div class="card">
+    <div class="card" onclick="openModal('Vovchok')">
         <img src="22.png" alt="Vovchok's art">
         <p>🇺🇦 Vovchok</p>
       </div> 
@@ -559,11 +572,11 @@
       </div> 
     
      
-     <div class="card">
+     <div class="card" onclick="openModal('Dubovyk')">
         <img src="11.png" alt="Dubovyk's art">
         <p>🇺🇦 Dubovyk</p>
       </div> 
-   <div class="card">
+   <div class="card" onclick="openModal('Natalia Tomchuk')">
         <img src="17.png" alt="Natalia Tomchuk's art">
         <p>🇺🇦 Natalia Tomchuk</p>
       </div> 
@@ -571,7 +584,7 @@
         <img src="13.jpg" alt="Ihor Barabash's art">
         <p>🇺🇦 Ihor Barabash</p>
       </div>
-      <div class="card">
+      <div class="card" onclick="openModal('Anhelina')">
         <img src="14.jpg" alt="Anhelina's art">
         <p>🇺🇦 Anhelina</p>
       </div> 
@@ -590,11 +603,11 @@
         <img src="16.png" alt="NASU's art">
         <p>🇺🇦 NASU</p>
       </div> 
-    <div class="card">
+    <div class="card" onclick="openModal('Ketysha')">
         <img src="19.png" alt="ketysha's art">
         <p>🇺🇦 Ketysha</p>
       </div> 
-    <div class="card">
+    <div class="card" onclick="openModal('Eva')">
         <img src="20.png" alt="Eva's art">
         <p>🇺🇦 Eva</p>
       </div> 
@@ -738,6 +751,9 @@ work, making it recognisable to art collectors worldwide.
 Her most recent work welcomes new symbolic elements experienced and inspired by dreams,
 meditation practice and sound baths.</p>
     <img src="29.jpg" alt="Lisa House's art" class="modal-art">
+    <a href="https://www.instagram.com/lisahouseartist/" target="_blank" class="instagram-link">
+  <img src="instagram.webp" alt="Instagram" class="instagram-icon">
+</a>
   </div>
 </div>
 
