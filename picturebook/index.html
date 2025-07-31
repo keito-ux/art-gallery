@@ -769,6 +769,69 @@ Through my artwork, I try to share kindness, warmth and my personal view of the 
     </div>
   </section>
 
+
+<section class="section" id="members">
+  <div class="title-with-image" style="justify-content: center;">
+    <h2>Project Members</h2>
+  </div>
+
+  <div class="profile">
+    <!-- ▼プロフィール1つ目 -->
+    <div class="profile-item" onclick="toggleProfile(this)">
+      <h3>Valentyna</h3>
+      <!-- ▼最初は非表示にする自己紹介 -->
+      <p class="bio">
+        My name is Valentyna, I’m Ukrainian, and I’m 19 years old. I’m an artist by education, holding a diploma of a junior bachelor. This year I graduated from college with a degree in "Fine Arts, Decorative Arts, and Restoration," specializing in painting.
+However, I still need to grow and improve, as there is so much I have yet to explore. That’s why I can’t call myself a professional yet — but I’m on my way there.
+What inspires me most is seeing beauty in everything — without exaggeration. What helps me create is the understanding that everything around us is part of a system. This awareness brings a deeper sense of value to all living and non-living things.
+In my art, I enjoy working with watercolor, graphic materials, and oil painting. I’m most interested in portraying people — their inner world and external uniqueness. I’m inspired by Ukrainian culture, by nature (a truly great teacher), and by my own inner experiences.
+I create art because, for me, it’s the best way to show and explain to others how I see and understand certain things in this world.
+      </p>
+    </div>
+
+    <!-- ▼プロフィール2つ目（例） -->
+  </div>
+</section>
+
+<!-- ▼クリック動作用のJS -->
+<script>
+  function toggleProfile(element) {
+    const bio = element.querySelector('.bio');
+    bio.classList.toggle('active');
+  }
+</script>
+
+<!-- ▼スタイル -->
+<style>
+  .profile-item {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .profile-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .bio {
+    display: none;
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #FBEEDC; /* 好きな色に変更可 */
+  }
+  .bio.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+
+    
 <section class="section" id="vision">
   <div class="title-with-image" style="justify-content: center;">
     <h2 style="text-align: center;">Our Vision</h2>
