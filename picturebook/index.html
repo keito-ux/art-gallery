@@ -1417,6 +1417,15 @@ Through collage, I aim to evoke feeling, build bridges between cultures and sens
   <footer style="text-align:center; padding:20px; color:#FBEEDC; font-size:0.9em;">
   © 2025 Kvitka Atelier — All rights reserved.
 </footer>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const participantCount = document.querySelectorAll(".grid-gallery .card").length;
+    const subtitleElement = document.querySelector(".section-subtitle");
+    subtitleElement.textContent = `Number of participants: ${participantCount + 7}`;
+  });
+</script>
+
   
 </body>
 </html>
