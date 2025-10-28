@@ -18,6 +18,18 @@
   <meta property="og:type" content="website">
 
   <style>
+
+  .scroll-gallery::after {
+  content: "▶";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: rgba(0,0,0,0.4);
+  pointer-events: none;
+}
+
     body {
       font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
