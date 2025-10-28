@@ -19,38 +19,41 @@
 
   <style>
 
-  .scroll-gallery {
-      display: flex;
-      overflow-x: auto;
-      gap: 12px;
-      scroll-snap-type: x mandatory;
-      padding: 0 1rem;
-      position: relative; /* ← これが重要！ */
-   　 min-height: 240px;
-    }
+ .scroll-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  scroll-snap-type: x mandatory;
+  padding: 0 1rem;
+  padding-right: 2.5rem; /* ← 余白 */
+  position: relative;
+  min-height: 240px; /* ← 高さ */
+  width: 100%;
+}
 
-    .scroll-gallery img {
-      flex: 0 0 auto;
-      width: 240px;
-      border-radius: 12px;
-      scroll-snap-align: start;
-    }
+.scroll-gallery img {
+  flex: 0 0 auto;
+  width: 240px;
+  border-radius: 12px;
+  scroll-snap-align: start;
+}
 
-    .scroll-gallery::-webkit-scrollbar {
-      display: none;
-    }
+.scroll-gallery::-webkit-scrollbar {
+  display: none;
+}
 
-    /* ← ここに追加 */
-    .scroll-gallery::after {
-      content: "▶";
-      position: absolute;
-      right: 8px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 24px;
-      color: rgba(0,0,0,0.4);
-      pointer-events: none;
-    }
+.scroll-gallery::after {
+  content: "▶";
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: red; /* テスト用に目立つ色 */
+  pointer-events: none;
+  z-index: 10;
+}
+
 
 
     body {
