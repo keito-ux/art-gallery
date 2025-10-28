@@ -19,16 +19,38 @@
 
   <style>
 
-  .scroll-gallery::after {
-  content: "▶";
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: rgba(0,0,0,0.4);
-  pointer-events: none;
-}
+  .scroll-gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 12px;
+      scroll-snap-type: x mandatory;
+      padding: 0 1rem;
+      position: relative; /* ← これが重要！ */
+    }
+
+    .scroll-gallery img {
+      flex: 0 0 auto;
+      width: 240px;
+      border-radius: 12px;
+      scroll-snap-align: start;
+    }
+
+    .scroll-gallery::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* ← ここに追加 */
+    .scroll-gallery::after {
+      content: "▶";
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: rgba(0,0,0,0.4);
+      pointer-events: none;
+    }
+
 
     body {
       font-family: 'Helvetica Neue', sans-serif;
