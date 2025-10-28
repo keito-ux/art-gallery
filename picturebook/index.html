@@ -19,40 +19,53 @@
 
   <style>
 
- .scroll-gallery {
+ .marquee {
   display: flex;
-  overflow-x: auto;
-  gap: 12px;
+  overflow-x: auto;          /* ←横スクロール */
   scroll-snap-type: x mandatory;
+  gap: 12px;
   padding: 0 1rem;
-  padding-right: 2.5rem; /* ← 余白 */
-  position: relative;
-  min-height: 240px; /* ← 高さ */
-  width: 100%;
+  scroll-behavior: smooth;
 }
 
-.scroll-gallery img {
+.marquee-content {
+  display: flex;
+  gap: 12px;
+}
+
+.art-card {
   flex: 0 0 auto;
-  width: 240px;
-  border-radius: 12px;
+  width: 220px;              /* ← ちょっと小さくしてチラ見せ */
   scroll-snap-align: start;
+  text-align: center;
 }
 
-.scroll-gallery::-webkit-scrollbar {
+.art-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.marquee::-webkit-scrollbar {
   display: none;
 }
 
-.scroll-gallery::after {
-  content: "▶";
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
-  color: red; /* テスト用に目立つ色 */
-  pointer-events: none;
-  z-index: 10;
+    .scroll-container {
+  position: relative;
 }
+
+.scroll-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #121212); /* ←背景色に合わせて調整 */
+  pointer-events: none;
+}
+
+
+
 
     body {
       font-family: 'Helvetica Neue', sans-serif;
@@ -465,6 +478,7 @@
     From first strokes to final scenes — this is how the story came to life.
   </p>
 
+  <div class="scroll-container"> 
   <div class="marquee">
   <div class="marquee-content">
     <div class="art-card">
@@ -498,6 +512,7 @@
     </div>
   </div>
 </div>
+    </div>
 </section>
 
     <section class="section" id="story">
