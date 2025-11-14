@@ -438,32 +438,31 @@
   margin-top: 20px;
 }
 
-    /* ★ Fruits and Stars だけ拡大表示 */
+/* 他カード（標準サイズ） */
+.art-card {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+/* ★ Fruits and Stars だけ大きく表示する */
 .art-card.large-card {
-  transform: scale(1.35);
-  z-index: 10;
+  width: 260px;    /* ← 実際にカード枠を広くする（重要） */
+  padding-top: 20px; 
+  padding-bottom: 20px;
 }
 
+/* ★ 画像だけをカード枠の中で大きく表示 */
 .art-card.large-card img {
-  border-radius: 12px; /* お好み */
-}
-
-    /* 画像だけを拡大する */
-.art-card.large-card img {
-  width: 150%;           /* ← お好みで調整。140〜160%がおすすめ */
+  width: 100%;     /* 枠いっぱいに表示 */
   height: auto;
   display: block;
-  margin: 0 auto;        /* 中央寄せ */
-  transform: translateY(20px);  
-  /* ↑ 上揃えで切れないように、拡大分少し下げる */
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
-/* テキストはそのまま（特に指定不要） */
+/* 文字は何も触らない → 自然に下へ押し下げられる */
 
-/* カード自体の崩れ防止 */
-.art-card.large-card {
-  padding-bottom: 20px;   /* 文字が画像に近づくのを防ぐ */
-}
+
 
 
   
