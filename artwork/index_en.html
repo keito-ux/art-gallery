@@ -120,6 +120,24 @@
   object-fit: cover;   /* 高さ揃えたい時に便利 */
 }
 
+    .picturebook-two-column {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.picturebook-two-column > div {
+  flex: 1;
+}
+
+.picturebook-two-column img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 8 / 20;  /* ★ 正方形で揃えるならここ変更可 */
+  object-fit: contain;  /* ★ 切れずに全体を見せる */
+  background-color: #f3f3f3; /* 余白が出た時にきれいに見える */
+  border-radius: 12px;
+}
 
     
 
@@ -195,14 +213,7 @@
     <div>
       <img src="yana.jpg" alt="Yana Painting">
     </div>
-    <div class="two-column">
-  <div>
-    <img src="applecherry.jpg" alt="apple cherry rose">
-  </div>
-  <div>
-    <img src="fennec.jpg" alt="fennec star">
-  </div>
-</div>
+    
     <div>
       <img src="IMG_1946.jpg" alt="Artwork 1" onclick="goToCheckout('IMG_1946.jpg')">
     </div>
@@ -220,7 +231,14 @@
         <source src="pic.mp4" type="video/mp4">
       </video>
     </div>
-
+<div class="two-column">
+  <div>
+    <img src="applecherry.jpg" alt="apple cherry rose">
+  </div>
+  <div>
+    <img src="fennec.jpg" alt="fennec star">
+  </div>
+</div>
     <div style="margin-top: 30px;">
       <a href="../picturebook/" style="font-size: 1.2em; text-decoration: underline;">▶ Explore the Picture Book</a>
     </div>
