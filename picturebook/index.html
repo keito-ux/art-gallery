@@ -102,7 +102,7 @@
 }
 
 .cta-icon-plain {
-  width: 10px;       /* ← サイズ自由に調整。いつもの四角い画像のまま */
+  width: 3px;       /* ← サイズ自由に調整。いつもの四角い画像のまま */
   height: auto;      
   border-radius: 0;  /* ← 切り抜きなし */
   object-fit: contain;  /* ← 画像をそのまま綺麗に表示 */
@@ -111,6 +111,28 @@
     img.cta-icon-plain {
   border-radius: 0 !important;
 }
+
+    .title-with-bg {
+  position: relative;
+  display: inline-block;
+}
+
+.title-with-bg::before {
+  content: "";
+  position: absolute;
+  left: -200px;         /* ← 画像をタイトルの左側へ移動 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;         /* ← 画像サイズを調整できる */
+  height: 250px;
+  background-image: url('star_deer_tulip.PNG');
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.9;         /* 好みで変更。背景感を出すなら0.5〜0.8 */
+  pointer-events: none; /* ← クリックの邪魔をしない */
+  z-index: -1;          /* ← 背面に配置 */
+}
+
 
 
 
@@ -524,7 +546,10 @@
   <img src="popout_fennec.PNG" class="coming-icon" alt="">
 </div>
 
-<h1 class="main-title">If I Followed the Star</h1>
+<div class="title-with-bg">
+  <h1 class="main-title">If I Followed the Star</h1>
+</div>
+
 
 
 
