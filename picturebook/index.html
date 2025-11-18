@@ -93,6 +93,19 @@
   margin-top: 20px;
 }
 
+    .cta-row {
+  display: inline-flex;   /* ボタン + 画像を横並び */
+  align-items: center;
+  gap: 12px;              /* ボタンと画像の間の距離 */
+}
+
+.cta-icon {
+  width: 40px;            /* 好みで調整 */
+  height: auto;
+  border-radius: 8px;     /* 必要なら削除 */
+  cursor: pointer;
+}
+
 
 
 
@@ -502,7 +515,7 @@
 
   <div class="header-title">
   <div class="coming-soon">Coming Soon:</div>
-  <img src="popoutfennec.PNG" class="coming-icon" alt="">
+  <img src="popout_fennec.PNG" class="coming-icon" alt="">
 </div>
 
 <h1 class="main-title">If I Followed the Star</h1>
@@ -607,8 +620,12 @@
             That winter, I traveled to Ukraine, visiting Kyiv and Lviv.
             Although self-taught in oil painting, I create works that reflect quiet beauty and cross-cultural connection — shaped by my travels, encounters, and a deep desire to express warmth through art.</p>
           <div class="cta">
-  <button onclick="window.location.href='../artwork/index_en.html'">View Gallery</button>
+  <div class="cta-row">
+    <button onclick="window.location.href='../artwork/index_en.html'">View Gallery</button>
+    <img src="star.png" class="cta-icon" alt="">
+  </div>
 </div>
+
         </div>
         <div class="profile-item">
           <img src="yulianna_2.jpg" alt="Yulianna">
