@@ -63,27 +63,34 @@
   background: linear-gradient(to right, transparent, #121212); /* ←背景色に合わせて調整 */
   pointer-events: none;
 }
+
     .header-title {
-  text-align: center;
-  color: #FFECA8;
+  position: relative;
+  text-align: center; /* ← Coming Soon を中央にする */
+  margin-bottom: 10px;
+}
+
+.coming-soon {
+  font-size: 2em;
   font-weight: bold;
+  color: #FFECA8;
 }
 
-.header-title .line1 {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.header-title .line2 {
-  margin-top: 6px;
-  font-size: 2.0em;
-}
-
-.title-icon {
-  width: 50px;
+/* 画像は右上固定で Coming Soon とは独立 */
+.coming-icon {
+  position: absolute;
+  right: 0;             /* ← 右端に配置 */
+  top: 50%;
+  transform: translateY(-50%); /* Coming Soon の高さに合わせる */
+  width: 90px;
   height: auto;
-  vertical-align: middle;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 3em;
+  color: #FFECA8;
+  margin-top: 20px;
 }
 
 
@@ -494,15 +501,12 @@
   <p class="brand">Presented by <strong>Kvitka Atelier</strong></p>
 
   <div class="header-title">
-  <div class="line1">
-    <span>Coming Soon:</span>
-    <img src="popout_fennec.PNG" class="title-icon" alt="">
-  </div>
-
-  <div class="line2">
-    If I Followed the Star
-  </div>
+  <div class="coming-soon">Coming Soon:</div>
+  <img src="fennec.png" class="coming-icon" alt="">
 </div>
+
+<h1 class="main-title">If I Followed the Star</h1>
+
 
 
   <p>A magical journey into a world of light, kindness, and co-creation</p>
