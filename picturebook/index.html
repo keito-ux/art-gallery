@@ -101,16 +101,8 @@
   gap: 12px;         /* ボタンと画像の間の距離 */
 }
 
-.cta-icon-plain {
-  width: 1px;       /* ← サイズ自由に調整。いつもの四角い画像のまま */
-  height: auto;      
-  border-radius: 0;  /* ← 切り抜きなし */
-  object-fit: contain;  /* ← 画像をそのまま綺麗に表示 */
-}
 
-    img.cta-icon-plain {
-  border-radius: 0 !important;
-}
+   
 
     .title-with-bg {
   position: relative;
@@ -131,6 +123,13 @@
   opacity: 0.9;         /* 好みで変更。背景感を出すなら0.5〜0.8 */
   pointer-events: none; /* ← クリックの邪魔をしない */
   z-index: -1;          /* ← 背面に配置 */
+}
+
+  .cta .cta-row img.cta-icon-plain {
+  width: 20px !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  object-fit: contain !important;
 }
 
 
