@@ -76,15 +76,19 @@
   color: #FFECA8;
 }
 
-/* 画像は右上固定で Coming Soon とは独立 */
+    
+
 .coming-icon {
   position: absolute;
-  right: -17px;             /* ← 右端に配置 */
+  right: -20px;     /* ← ここを動かせば右に動く！ */
   top: 50%;
-  transform: translateY(-50%); /* Coming Soon の高さに合わせる */
+  transform: translateY(-50%);
   width: 42px;
   height: auto;
 }
+
+
+
 
 .main-title {
   text-align: center;
@@ -101,13 +105,12 @@
   gap: 12px;         /* ボタンと画像の間の距離 */
 }
 
-
+.title-with-bg {
+  position: relative;
+}
    
 
-    .title-with-bg {
-  position: relative;
-  display: inline-block;
-}
+   
 
 .title-with-bg::before {
   content: "";
