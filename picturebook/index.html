@@ -140,6 +140,15 @@
     0 0 8px rgba(0, 0, 0, 0.25);     /* 周囲にぼかす光のような影 */
 }
 
+    .brand-under-title {
+  font-size: 0.9em;            /* ← 小さく */
+  margin-top: -10px;           /* ← タイトルとの行間を詰める */
+  margin-bottom: 5px;          /* ← subtitle との距離 */
+  color: #FBEEDC;              /* ← 元のブランド色 */
+  opacity: 0.85;               /* ← 少し控えめにして上品に */
+}
+
+
 
 
 
@@ -547,19 +556,22 @@
 
 
     <header>
-  <p class="brand">Presented by <strong>Kvitka Atelier</strong></p>
-
   <div class="header-title">
-  <div class="coming-soon">Coming Soon:</div>
-  <img src="popout_fennec.PNG" class="coming-icon" alt="">
-</div>
+    <div class="coming-soon">Coming Soon:</div>
+    <img src="popout_fennec.PNG" class="coming-icon" alt="">
+  </div>
 
-<div class="title-with-bg">
-  <h1 class="main-title">If I Followed the Star</h1>
-</div>
-      <p class="subtitle">A magical journey into a world of light, kindness, and co-creation</p>
+  <div class="title-with-bg">
+    <h1 class="main-title">If I Followed the Star</h1>
+  </div>
+  <!-- ★ ここにブランドを移動する！ -->
+  <p class="brand-under-title">Presented by <strong>Kvitka Atelier</strong></p>
 
+  <p class="subtitle">
+    A magical journey into a world of light, kindness, and co-creation
+  </p>
 </header>
+
 
 
    
