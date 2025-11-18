@@ -82,7 +82,7 @@
   right: 0;             /* ← 右端に配置 */
   top: 50%;
   transform: translateY(-50%); /* Coming Soon の高さに合わせる */
-  width: 70px;
+  width: 60px;
   height: auto;
 }
 
@@ -93,18 +93,21 @@
   margin-top: 20px;
 }
 
+    
+
     .cta-row {
-  display: inline-flex;   /* ボタン + 画像を横並び */
+  display: inline-flex;
   align-items: center;
-  gap: 12px;              /* ボタンと画像の間の距離 */
+  gap: 12px;         /* ボタンと画像の間の距離 */
 }
 
-.cta-icon {
-  width: 40px;            /* 好みで調整 */
-  height: auto;
-  border-radius: 8px;     /* 必要なら削除 */
-  cursor: pointer;
+.cta-icon-plain {
+  width: 10px;       /* ← サイズ自由に調整。いつもの四角い画像のまま */
+  height: auto;      
+  border-radius: 0;  /* ← 切り抜きなし */
+  object-fit: contain;  /* ← 画像をそのまま綺麗に表示 */
 }
+
 
 
 
@@ -622,9 +625,10 @@
           <div class="cta">
   <div class="cta-row">
     <button onclick="window.location.href='../artwork/index_en.html'">View Gallery</button>
-    <img src="eaten_apple.PNG" class="cta-icon" alt="">
+    <img src="eaten_apple.PNG" class="cta-icon-plain" alt="">
   </div>
 </div>
+
 
         </div>
         <div class="profile-item">
