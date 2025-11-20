@@ -150,7 +150,11 @@
   background-color: #f3f3f3; /* 余白が出た時にきれいに見える */
   border-radius: 12px;
 }
-    
+    .rabbit-raw {
+  all: unset;        /* ← 既存 .gallery img のスタイル全解除 */
+  display: inline;   /* デフォルト挙動に戻す */
+}
+
 
 
     
@@ -246,14 +250,11 @@
 </div>
 
     <!-- ★ ここからラビット画像を追加 ★ -->
+<!-- ★ rabbit画像（スタイル解除版） ★ -->
 <div style="margin-top: 30px; text-align: center;">
-  <img src="rabbit.PNG" alt="rabbit" style="
-      width: 100%;
-      max-width: 600px;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  ">
+  <img src="rabbit.PNG" alt="rabbit" class="rabbit-raw">
 </div>
+
 <!-- ★ ここまで ★ -->
 
 
