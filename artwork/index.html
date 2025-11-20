@@ -150,21 +150,7 @@
   background-color: #f3f3f3; /* 余白が出た時にきれいに見える */
   border-radius: 12px;
 }
-    .rabbit-column {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;          /* 画像の間隔 */
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.rabbit-column img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
-}
+    
 
 
     
@@ -259,11 +245,17 @@
   </div>
 </div>
 
-    <div class="rabbit-column">
-      <img src="rabbit1.jpg" alt="rabbit 1">
-      <img src="rabbit2.jpg" alt="rabbit 2">
-      <img src="rabbit3.jpg" alt="rabbit 3">
-    </div>
+    <!-- ★ ここからラビット画像を追加 ★ -->
+<div style="margin-top: 30px; text-align: center;">
+  <img src="rabbit.PNG" alt="rabbit" style="
+      width: 100%;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  ">
+</div>
+<!-- ★ ここまで ★ -->
+
 
     <div style="margin-top: 30px;">
       <a href="../picturebook/" style="font-size: 1.2em; text-decoration: underline;">▶ 絵本をみる</a>
