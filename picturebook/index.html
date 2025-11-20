@@ -149,13 +149,6 @@
   opacity: 0.85;               /* ← 少し控えめにして上品に */
 }
     
-.rabbit {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 60px;       /* ← 初期位置（右端） */
-  width: 40px;
-}
 
 
 
@@ -536,11 +529,7 @@
   margin-top: 20px;
 }
 
-<style>
-/* ナビの下線を全部消す */
-nav a {
-  text-decoration: none !important;
-}
+
     nav .menu {
   display: flex;
   gap: 7px;  /* ← ここを小さくすると詰まる（おすすめ 8〜14） */
@@ -556,7 +545,9 @@ nav a {
   height: auto;
   z-index: 9999;
 }
-</style>
+
+    
+
 
 
   
@@ -579,12 +570,13 @@ nav a {
   z-index: 999;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;   /* ← 中央揃え（本当の中央になる） */
   font-family: 'Helvetica Neue', sans-serif;
+  position: relative;         /* ← うさぎabsolute用 */
 ">
 
-  <!-- 左ブロック（メニュー） -->
-  <div style="display: flex; gap: 18px; margin: 0 auto;">
+  <!-- メニュー（中央に並ぶ） -->
+  <div class="menu" style="display: flex; gap: 12px;">
     <a href="#making" style="color: #FFECA8;">Making</a>
     <a href="#story" style="color: #FFECA8;">Story</a>
     <a href="#behind" style="color: #FFECA8;">Behind</a>
@@ -592,11 +584,8 @@ nav a {
     <a href="#vision" style="color: #FFECA8;">Vision</a>
   </div>
 
-  <!-- 右ブロック（ウサギ） -->
-  <div style="flex-shrink: 0;">
-    <img src="rabbitR.PNG" class="rabbit-nav">
-
-  </div>
+  <!-- うさぎ（右側に絶対配置） -->
+  <img src="rabbitR.PNG" class="rabbit-nav">
 
 </nav>
 
