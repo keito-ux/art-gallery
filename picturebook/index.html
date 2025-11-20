@@ -542,32 +542,40 @@
 </head>
 <body>
 
- <nav style="
-  position: fixed; 
-  top: 0; 
-  width: 100%; 
-  background: rgba(76, 93, 140, 0.9); 
-  padding: 10px 20px; 
-  z-index: 999; 
-  display: flex; 
-  justify-content: space-between; 
+<nav style="
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(76, 93, 140, 0.9);
+  padding: 10px 20px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;  /* メニューは中央寄せ */
+  gap: 20px;
   align-items: center;
-  gap: 20px; 
   font-family: 'Helvetica Neue', sans-serif;
+  position: relative;       /* ★ ウサギを絶対配置するために必要 */
 ">
-   <a href="#making" style="color: #FFECA8; text-decoration: none;">Making</a>
-    <a href="#story" style="color: #FFECA8; text-decoration: none;">Story</a>
 
+  <a href="#making" style="color: #FFECA8; text-decoration: none;">Making</a>
+  <a href="#story" style="color: #FFECA8; text-decoration: none;">Story</a>
   <a href="#behind" style="color: #FFECA8; text-decoration: none;">Behind</a>
-
   <a href="#participants" style="color: #FFECA8; text-decoration: none;">100 Flowers</a>
-     <a href="#vision" style="color: #FFECA8; text-decoration: none;">Vision</a>
-<img src="rabbitR.PNG" style="width: 48px; height: auto; margin-right: 20px;">
+  <a href="#vision" style="color: #FFECA8; text-decoration: none;">Vision</a>
 
-
-   
-
+  <!-- ★ ウサギを 1 行維持したまま右上に固定する -->
+  <img 
+    src="rabbitR.PNG"
+    style="
+      width: 38px;            /* ← スマホでも収まるサイズ */
+      position: absolute;
+      right: 8px;            /* ← もっと左へ寄せたければここを調整 */
+      top: 50%;
+      transform: translateY(-50%);
+    "
+  >
 </nav>
+
 
   <div class="wrapper">
 
