@@ -541,13 +541,17 @@
 nav a {
   text-decoration: none !important;
 }
+    nav .menu {
+  display: flex;
+  gap: 7px;  /* ← ここを小さくすると詰まる（おすすめ 8〜14） */
+}
 
 /* うさぎの位置調整（ここを触れば動く） */
 .rabbit-nav {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 60px;   /* ← 好きな位置へ動かせる、ここを変更するだけ */
+  right: 100px;   /* ← 好きな位置へ動かせる、ここを変更するだけ */
   width: 40px;
   height: auto;
   z-index: 9999;
