@@ -407,6 +407,43 @@
       .inline-icon {
         width: 60px;
       }
+      .menu {
+    margin-left: -15px;
+  }
+
+      body, html {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+
+  nav {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* メニューがはみ出さないようにする */
+  .menu {
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+
+
+  /* ウサギをスマホだけ少し小さくする＆右端に収める */
+  .rabbit-nav {
+    width: 28px !important;
+    right: 10px !important;   /* ← スマホ幅でも確実に入る */
+  }
+
+  /* 横長ギャラリー防止 */
+  .marquee-content {
+    gap: 16px !important;
+  }
+
+  /* grid-gallery の max-width:none を打ち消す */
+  .grid-gallery {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
     }
     /* ← この下に追加！ */
   #making {
@@ -546,10 +583,7 @@
   z-index: 9999;
 }
 
-  .menu {
-  margin-left: -20px;   /* ← 左へ20pxずらす（値は自由） */
-}
-
+  
 
 
 
