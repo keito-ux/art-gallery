@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://keito-ux.github.io/art-gallery/picturebook/sitemap.xml
